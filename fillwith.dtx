@@ -1,0 +1,485 @@
+% \iffalse meta-comment
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% fillwith.dtx
+% Additions and changes Copyright (C) 2010-2024 Clea F. Rees.
+% Code from skeleton.dtx Copyright (C) 2015-2024 Scott Pakin (see below).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3c
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   https://www.latex-project.org/lppl.txt
+% and version 1.3c or later is part of all distributions of LaTeX
+% version 2008-05-04 or later.
+%
+% This work has the LPPL maintenance status \muaintained'.
+%
+% The Current Maintainer of this work is Clea F. Rees.
+%
+% This work consists of all files listed in manifest.txt.
+%
+% The file fillwith.dtx is a derived work under the terms of the
+% LPPL. It is based on version 2.4 of skeleton.dtx which is part of
+% dtxtut by Scott Pakin. A copy of dtxtut, including the
+% unmodified version of skeleton.dtx is available from
+% https://www.ctan.org/pkg/dtxtut and released under the LPPL.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \fi
+%
+% \iffalse
+%<*driver>
+\RequirePackage{svn-prov}
+\ProvidesFileSVN{$Id: fillwith.dtx 10191 2024-08-01 02:29:38Z cfrees $}[v0.0 \revinfo][\filename: \filebase]
+\DefineFileInfoSVN[fillwith]
+\GetFileInfoSVN*
+% ref. ateb Max Chernoff: https://tex.stackexchange.com/a/723294/ 
+\def\MakePrivateLetters{\makeatletter\ExplSyntaxOn\endlinechar13}
+\documentclass[11pt,british]{ltxdoc}
+\usepackage{fillwith}
+\EnableCrossrefs
+\CodelineIndex
+\RecordChanges
+\OnlyDescription
+%^^A \ExplSyntaxOn
+%^^A \makeatletter
+\DoNotIndex{\verb,\ProvidesPackageSVN,\NeedsTeXFormat,\ProcessKeyOptions,\ExplSyntaxOn,\ExplSyntaxOff,\RequirePackage,\NeedsTeXFormat,\DefineFileInfoSVN,\GetInfoSVN,\@ifundefined,\@ifl@t@r\ExplLoaderFileDate,\endinput,\PackageError,\PackageWarning,\PackageInfo,\keys_define:nn,\keys_set:nn,\ProcessKeysOptionns}
+%^^A \makeatother
+%^^A \ExplSyntaxOff
+\begin{document}
+  \DocInput{\filename}
+\end{document}
+%</driver>
+% \fi
+% \title{\filebase{} \filerev}
+% \author{Clea F. Rees}
+% \date{\filedate}
+% \maketitle
+% \begin{abstract}
+% A small package originally based on an answer to a question I asked on \TeX{} SE.
+% The intended purpose was the creation of worksheets for students where I would like \LaTeX{} to use the available vertical space to provide lined areas for answers.
+% Since then, the code has been (partially) rewritten in \pkg{expl3} and extended in response to both my own needs and others' questions on \TeX{} SE.
+% The package aims to do one thing: to fill a vertical space in the same way as, say, \verb|\vfill|, but with some kind of ‘filler’ rather than empty space.
+% Currently, the package supports lines, dotted lines and numbered lines, though the latter should not be used to fill long stretches as it is extremely inefficient.
+% The remainder of the current line may optionally be filled in the same way and the ‘filler’ may be coloured if desired.
+% \end{abstract}
+% \changes{v1.0}{???}{First public release.}
+% \changes{\fileversion}{\filedate}{}
+% 
+%
+% \MaybeStop{%
+% \PrintChanges
+% \PrintIndex
+% }
+% 
+% \section{Implementation}
+%
+% You do not need to read the remainder of this document in order to install or use the package.
+%
+% \iffalse
+%<@@=fillwith>
+%<*sty>
+% \fi
+%    \begin{macrocode}
+\NeedsTeXFormat{LaTeX2e}[2021-11-15]
+\RequirePackage{svn-prov}
+\ProvidesPackageSVN[\filebase.sty]{$Id: fillwith.dtx 10191 2024-08-01 02:29:38Z cfrees $}[v0.0 \revinfo][\filebase: fill vertically with non-space]
+% this is needed only because l3doc overwrites \fileversion and \filedate
+% neither ltxdoc nor doc does this
+\DefineFileInfoSVN
+%    \end{macrocode}
+% \iffalse
+% ^^A Paid â defnyddio \GetFileInfoSVN*/\GetFileInfoSVN{} yn y fan hon!!
+% \fi
+%    \begin{macrocode}
+\RequirePackage{xcolor}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% copied verbatim, excepting format from Joseph Wright's' siunitx.sty under LPPL
+\@ifundefined{ExplLoaderFileDate}{%
+  \RequirePackage{expl3}%
+}{}
+% almost verbatim from siunitx.sty
+\@ifl@t@r\ExplLoaderFileDate{2022-02-24}{%
+}{%
+  \PackageError{fillwith}{Support package expl3 too old}
+  {%
+    You need to update your installation of the bundles 'l3kernel' and
+    'l3packages'.\MessageBreak
+    Loading~fillwith~will~abort!%
+  }%
+  \endinput
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ExplSyntaxOn
+\prop_gput:Nnn \g_msg_module_name_prop { fillwith } { fillwith }
+
+% BEGIN Expl pkg option setup
+
+\keys_define:nn { fillwith }
+{
+  color .meta:n = {
+    colour = #1,
+  },
+  colour .code:n = {
+    \colorlet{fillwithcolour}{#1}
+  },
+  dotted ~ color .meta:n = {
+    dotted colour = #1,
+  },
+  dotted color .meta:n = {
+    dotted colour = #1,
+  },
+  dotted ~ colour .meta:n = {
+    dotted colour = #1,
+  },
+  dotted colour .code:n = {
+    \colorlet{fillwithdottedcolour}{#1}
+  },
+  lliw .meta:n = {
+    colour = #1,
+  },
+  colour .initial:n = gray,
+  dotted colour .initial:n = black,
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Joseph Wright: from siunitx.sty ; https://chat.stackexchange.com/transcript/message/64327823#64327823
+\providecommand \IfFormatAtLeastTF { \@ifl@t@r \fmtversion }
+\IfFormatAtLeastTF { 2022-06-01 }
+{
+  \ProcessKeyOptions [ fillwith ]
+}{
+  \RequirePackage { l3keys2e }
+  \ProcessKeysOptions { fillwith }
+}
+\IfFormatAtLeastTF { 2020-10-01 }{
+}{
+  \RequirePackage { xparse }
+  \providecommand \ExpandArgs [1]
+  { \cs_if_exist_use:c { exp_args:N #1 } }
+}
+% END Expl pkg option setup
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BEGIN vars
+\box_new:N \l__fillwith_adj_rule_box
+\box_new:N \l__fillwith_part_rule_box
+\box_new:N \l__fillwith_tmpa_box
+\box_new:N \l__fillwith_tmpb_box
+% BEGIN coffins
+\coffin_new:N \l__fillwith_line_coffin
+\coffin_new:N \l__fillwith_lines_coffin
+\coffin_new:N \l__fillwith_part_coffin
+\coffin_new:N \l__fillwith_tmpa_coffin
+% END coffins
+% BEGIN dims
+\dim_new:N \l__fillwith_ht_dim
+\dim_new:N \l__fillwith_dp_dim
+\dim_new:N \l__fillwith_rem_dim
+\dim_new:N \l__fillwith_line_ht_dim
+\dim_new:N \l__fillwith_line_adj_hsize_dim
+\dim_set:Nn \l__fillwith_line_ht_dim { 0.4pt }
+\dim_new:N \l__fillwith_line_madj_dim
+\dim_new:N \l__fillwith_line_vadj_dim
+\dim_set_eq:NN \l__fillwith_line_vadj_dim \c_zero_dim
+\dim_new:N \l__fillwith_goal_dim
+\dim_new:N \l__fillwith_tmpa_dim
+% END dims
+\int_new:N \g__fillwith_cnt_int
+% END vars
+% BEGIN fns
+\cs_new_protected_nopar:Nn \__fillwith_style: {}
+\cs_new_protected_nopar:Nn \__fillwith_coffin_tht:N
+{
+  \dim_eval:n { \coffin_ht:N #1 + \coffin_dp:N #1 }
+}
+% BEGIN \__fillwith_hrulefill:
+\cs_new_protected_nopar:Npn \__fillwith_hrulefill_part:
+{
+  \vrule height \c_zero_dim depth \l__fillwith_line_ht_dim width 0.1pt
+}
+\cs_new_protected_nopar:Npn \__fillwith_hrulefill:
+{
+  \vrule height \c_zero_dim depth \l__fillwith_line_ht_dim width \l__fillwith_line_adj_hsize_dim
+}
+% END \__fillwith_hrulefill:
+% BEGIN \__fillwith_dottedfill:
+\cs_new_protected_nopar:Npn \__fillwith_dottedfill_part:
+{
+  \hbox to 0.33em {\hss .\hss}
+}
+\cs_new_protected_nopar:Npn \__fillwith_dottedfill:
+{
+  \leaders \hbox to 0.33em {\hss .\hss} \hfill \kern \c_zero_dim
+}
+% END \__fillwith_dottedfill:
+% END fns
+\NewDocumentCommand\fillwithset { +m }{
+  \keys_set:nn { fillwith } { #1 }
+}
+% BEGIN keys (+)
+\keys_define:nn { fillwith }
+{
+  cont .bool_set:N = \l__fillwith_cont_bool,
+  cont .default:n = true,
+  cont .initial:n = false,
+  fillwith~ht .tl_set:N = \l__fillwith_ht_tl,
+  fillwith~ht .initial:n = 2,
+  fillwith~ht .default:n = 2,
+  goal ~ ht .dim_set:N = \l__fillwith_goal_dim,
+  line nos .bool_set:N = \l__fillwith_nos_bool,
+  line ~ nos .bool_set:N = \l__fillwith_nos_bool,
+  line ~ nos .default:n = true,
+  line ~ nos .initial:n = false,
+  no ~ font .tl_set:N = \l__fillwith_no_font_tl,
+  no ~ font .initial:n = { \normalfont\normalsize },
+  no ~ font .default:n = { \normalfont\normalsize },
+  style .choices:nn =
+  {
+    rule,  dots , line , lines , rules , unknown
+  }{
+    \if_case:w \l_keys_choice_int
+      \or: \cs_set_eq:NN \__fillwith_style: \__fillwith_hrulefill:
+      \or: \cs_set_eq:NN \__fillwith_style: \__fillwith_dottedfill:
+      \or: \cs_set_eq:NN \__fillwith_style: \__fillwith_hrulefill:
+      \or: \cs_set_eq:NN \__fillwith_style: \__fillwith_hrulefill:
+      \or: \cs_set_eq:NN \__fillwith_style: \__fillwith_hrulefill:
+      \else: \cs_set_protected_nopar:Nn \__fillwith_style: { \use:c { \l_keys_choice_tl } }
+    \fi:
+    \if_case:w \l_keys_choice_int
+      \or: \cs_set_eq:NN \__fillwith_style_part: \__fillwith_hrulefill_part:
+      \or: \cs_set_eq:NN \__fillwith_style_part: \__fillwith_dottedfill_part:
+      \or: \cs_set_eq:NN \__fillwith_style_part: \__fillwith_hrulefill_part:
+      \or: \cs_set_eq:NN \__fillwith_style_part: \__fillwith_hrulefill_part:
+      \or: \cs_set_eq:NN \__fillwith_style_part: \__fillwith_hrulefill_part:
+      \else: \cs_set_protected_nopar:Nn \__fillwith_style_part: { \use:c { \l_keys_choice_tl part } }
+    \fi:
+  },
+  style .default:n = dots,
+  style .initial:n = dots,
+}
+% END keys (+)
+
+% BEGIN \__fillwith_fill:
+% ref: https://tex.stackexchange.com/a/241139/ Harish Kumar
+\cs_new_protected_nopar:Nn \__fillwith_fill:
+{
+  \__fillwith_measures:
+  \dim_set:Nn \l__fillwith_line_adj_hsize_dim { \hsize - \@totalleftmargin }
+  \vbox_set:Nn \l__fillwith_adj_rule_box
+  {
+    \parindent=0pt
+    \vrule height \l__fillwith_ht_dim depth \l__fillwith_dp_dim width \c_zero_dim
+    \skip_horizontal:n { \@totalleftmargin }
+    \__fillwith_style:
+  }
+  \if_mode_horizontal:
+    \bool_if:NT \l__fillwith_cont_bool
+    {
+      \leaders \box_use:N \l__fillwith_part_rule_box  \hfill \kern \c_zero_dim
+    }{
+      \vrule height \l__fillwith_ht_dim depth \l__fillwith_dp_dim width \c_zero_dim
+    }
+    %^^A gweithio ond erbyn y rheolau
+    %^^A byddai'n achosi draferth, siwr o fod
+    % \tex_par:D
+    %^^A yn lle hynny, ceisio hyn - oes perygl hefyd?
+    \para_raw_end:
+  \else:
+    \unskip
+    \skip_vertical:n { \l__fillwith_dp_dim }
+  \fi:
+  \xleaders \box_use:N \l__fillwith_adj_rule_box  \vfill
+  \para_end:
+  \normalcolor
+}
+% END \__fillwith_fill:
+% BEGIN \__fillwith_measures:
+\cs_new_protected_nopar:Nn \__fillwith_measures:
+{
+  \color{fillwithcolour}
+  \offinterlineskip
+  \hbox_set:Nn \l__fillwith_part_rule_box
+  {
+    \strut
+    \__fillwith_style_part:
+    \kern \c_zero_dim
+  }
+  \dim_set:Nn \l__fillwith_tmpa_dim { \box_ht:N \l__fillwith_part_rule_box }
+  \dim_set:Nn \l__fillwith_ht_dim { \l__fillwith_ht_tl  \l__fillwith_tmpa_dim }
+  \box_set_ht:Nn \l__fillwith_part_rule_box { \l__fillwith_ht_dim }
+  \dim_set:Nn \l__fillwith_tmpa_dim { \box_dp:N \l__fillwith_part_rule_box }
+  % neu  \fp_to_dim:n { \l__fillwith_ht_tl * \l__fillwith_tmpa_dim } ??
+  \dim_set:Nn \l__fillwith_dp_dim { \l__fillwith_ht_tl  \l__fillwith_tmpa_dim }
+  \box_set_dp:Nn \l__fillwith_part_rule_box { \l__fillwith_dp_dim }
+}
+% END \__fillwith_measures:
+% BEGIN fillwith
+\NewDocumentCommand \fillwith { s o }
+{
+  \group_begin:
+    \IfValueT { #2 }
+    {
+      \keys_set:nn { fillwith } { #2 }
+    }
+    \IfBooleanTF { #1 }
+    {
+      \bool_set_true:N \l__fillwith_cont_bool
+    }{
+      \bool_set_false:N \l__fillwith_cont_bool
+    }
+    \__fillwith_fill:
+  \group_end:
+}
+% END fillwith
+% BEGIN fillwithdottedlines
+\NewDocumentCommand \fillwithdottedlines { s O { 2 } }
+{
+  \group_begin:
+    \IfBooleanTF { #1 }
+    {
+      \bool_set_true:N \l__fillwith_cont_bool
+    }{
+      \bool_set_false:N \l__fillwith_cont_bool
+    }
+    \keys_set:nn { fillwith } { style = dots, fillwith~ht=#2 }
+    \__fillwith_fill:
+  \group_end:
+}
+% END fillwithdottedlines
+% BEGIN fillwithnolines
+\cs_new_protected:Nn \__fillwith_nos: % rhybudd: ARAF ! SLOW!
+{
+  \parindent=0pt
+  \__fillwith_measures:
+  \dim_set_eq:NN \l__fillwith_line_adj_hsize_dim \linewidth
+  \vcoffin_set:Nnn \l__fillwith_line_coffin { \l__fillwith_line_adj_hsize_dim }
+  {
+    \parindent=0pt
+    \vrule height \l__fillwith_ht_dim depth \l__fillwith_dp_dim width \c_zero_dim
+    \skip_horizontal:n \c_zero_skip
+    \__fillwith_style:
+  }
+  \coffin_set_eq:NN \l__fillwith_lines_coffin \l__fillwith_line_coffin
+  \if_mode_horizontal:
+    \bool_if:NTF \l__fillwith_cont_bool
+    {
+      \leaders \box_use:N \l__fillwith_part_rule_box  \hfill \kern \c_zero_dim
+      \int_gincr:N \g__fillwith_cnt_int
+      % \vcoffin_set:Nnn \l__fillwith_tmpa_coffin  { 1.5em} 
+      % {
+      %   \int_to_arabic:n { \g__fillwith_cnt_int } 
+      % }
+      % \coffin_mark_handle:Nnnn \l__fillwith_tmpa_coffin {B} {l} { red }
+      % \coffin_mark_handle:Nnnn \l__fillwith_tmpa_coffin {b} {l} { green }
+      % \coffin_attach:NnnNnnnn \l__fillwith_lines_coffin {B} {r} \l__fillwith_tmpa_coffin {B} {l} {2.5pt} { \l__fillwith_ht_dim + \l__fillwith_dp_dim }
+      % \coffin_mark_handle:Nnnn \l__fillwith_lines_coffin {T} {r} { blue }
+      % \coffin_mark_handle:Nnnn \l__fillwith_lines_coffin {t} {r} { magenta }
+      \dim_set:Nn \l__fillwith_line_vadj_dim { \l__fillwith_dp_dim }
+    }{
+      \vrule height \l__fillwith_ht_dim depth \l__fillwith_dp_dim width \c_zero_dim
+    }
+    \dim_set:Nn \l__fillwith_line_madj_dim { \@totalleftmargin }
+    \para_raw_end:
+  \else:
+    \dim_set_eq:NN \l__fillwith_line_madj_dim \c_zero_dim
+    \unskip
+    \skip_vertical:n { \l__fillwith_dp_dim }
+  \fi:
+  \int_gincr:N \g__fillwith_cnt_int
+  \vcoffin_set:Nnn \l__fillwith_tmpa_coffin  { 1.5em} 
+  {
+    \l__fillwith_no_font_tl \int_to_arabic:n { \g__fillwith_cnt_int } 
+  }
+  \coffin_attach:NnnNnnnn \l__fillwith_lines_coffin {B} {r} \l__fillwith_tmpa_coffin {B} {l} {2.5pt} {\c_zero_dim}
+  \dim_set:Nn \l__fillwith_rem_dim 
+  {
+    \l__fillwith_goal_dim -\footskip - \pagetotal  
+  }
+  \dim_until_do:nNnn { \__fillwith_coffin_tht:N \l__fillwith_lines_coffin } > { \l__fillwith_rem_dim - \l__fillwith_ht_dim - \l__fillwith_dp_dim }
+  {
+    \coffin_join:NnnNnnnn \l__fillwith_lines_coffin { b } { l } \l__fillwith_line_coffin { t } { l } { \c_zero_dim } { \c_zero_dim }
+    \int_gincr:N \g__fillwith_cnt_int
+    \vcoffin_set:Nnn \l__fillwith_tmpa_coffin  {1.5em} 
+    {
+      \int_to_arabic:n { \g__fillwith_cnt_int } 
+    }
+    \coffin_attach:NnnNnnnn \l__fillwith_lines_coffin {B} {r} \l__fillwith_tmpa_coffin {B} {l} {2.5pt} {\c_zero_dim}
+  }
+  \coffin_typeset:Nnnnn \l__fillwith_lines_coffin { B } { l } { \l__fillwith_line_madj_dim } { \l__fillwith_line_vadj_dim }
+  \para_end:
+  \normalcolor
+}
+\NewDocumentCommand \fillwithnolines { s O { } }
+{
+  \group_begin:
+    \IfBooleanTF { #1 }
+    {
+      \bool_set_true:N \l__fillwith_cont_bool
+    }{
+      \bool_set_false:N \l__fillwith_cont_bool
+    }
+    \keys_set:nn { fillwith } {  goal ~ ht = \pagegoal, #2 }
+    \__fillwith_nos:
+  \group_end:
+}
+% END fillwithnolines
+\ExplSyntaxOff
+
+%    \end{macrocode}
+% \iffalse
+%</sty>
+% \fi
+% 
+% \subsection{??}
+% 
+% \iffalse
+%<*ee>
+% \fi
+%    \begin{macrocode}
+\documentclass[british,a4paper]{article}
+\usepackage{babel}
+\usepackage{fillwith}
+\usepackage{cfr-lm}
+\begin{document}
+\author{A. N. Author}
+\title{\texttt{fillwith} Demo}
+\maketitle
+\begin{enumerate}
+  \item What is the answer to the question?
+    \fillwith[style=rule]
+  \item What is the answer to the question?
+
+    \fillwith[style=rule]
+  \item How did you answer the previous question?
+    \fillwith*[style=line]
+    \clearpage
+  \item Evaluate your responses so far.
+    \fillwithdottedlines
+  \item Evaluate your responses so far.
+
+    \fillwithdottedlines
+  \item Criticise your evaluation.
+    \fillwithdottedlines*
+    \clearpage
+  \item Assess your answers.
+    \fillwithnolines[goal ht = .33\textheight]
+  \item Assess your answers.
+
+    \fillwithnolines[goal ht = .67\textheight]
+  \item Summarise your analysis.
+    \fillwithnolines*
+\end{enumerate}
+
+\end{document}
+%    \end{macrocode}
+% \iffalse
+%</ee>
+% \fi
+% \subsection{Other}
+% \iffalse
+%<*other>
+% \fi
+%    \begin{macrocode}
+%    \end{macrocode}
+% \iffalse
+%</other>
+% \fi
+%\Finale
