@@ -1,0 +1,87 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% This is file `fillwith-test.tex',
+%%
+%% Copyright (C) 2024 Clea F. Rees.
+%% 
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%   https://www.latex-project.org/lppl.txt
+%% and version 1.3c or later is part of all distributions of LaTeX
+%% version 2008-05-04 or later.
+%% 
+%% This work has the LPPL maintenance status `maintained'.
+%% 
+%% The Current Maintainer of this work is Clea F. Rees.
+%% 
+%% This file may only be distributed together with a copy of the package
+%% fillwith. You may however distribute the package fillwith without
+%% such generated files.
+%% 
+%% This work consists of all files listed in manifest.txt.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{svn-prov}
+\ProvidesFileSVN{$Id: fillwith-test.lvt 10198 2024-08-07 20:46:53Z cfrees $}[v0.0 \revinfo][\filebase: test]
+\input regression-test.tex\relax
+\documentclass{article}
+\usepackage{fillwith}	
+
+\begin{document}
+\START
+% RHAID ddefnyddio'r llinell isod tu allan i'r \TEST
+\ExplSyntaxOn
+\begin{enumerate}
+\TEST{fillwithrules-test}{
+  \showoutput
+  \item  What ~ is ~ the ~ answer ~ to ~ the ~ question?
+    \fillwithrules
+  \item  How ~ did ~ you ~ answer ~ the ~ previous ~ ~ question?
+    \fillwith*[style=line]
+  \item  Why ~ answer?
+    \par
+
+    \fillwith*[style=rule,fillwith ~ ht=1.25,colour=blue!40!cyan]
+    \clearpage
+}
+\end{enumerate}
+\begin{enumerate}
+\TEST{fillwithdottedlines-test}{
+  \showoutput
+  \item  Evaluate ~ your ~ responses ~ so ~ far.
+    \fillwithdottedlines
+  \item  Evaluate ~ your ~ responses ~ so ~ far.
+    \par
+
+    {%
+      \fillwithset{dotted colour=magenta}%
+      \fillwithdottedlines[1.5]
+    }
+  \item  Criticise ~ your ~ evaluation.
+    \fillwithdottedlines*
+    \clearpage
+}
+\end{enumerate}
+\begin{enumerate}
+\TEST{fillwithno-test}{
+  \showoutput
+  \item  Assess ~ your ~ answers.
+    \fillwithnolines[goal ~ ht=.33\textheight]
+  \item  Assess ~ your ~ answers.
+    \par
+
+    \fillwithnolines[style=rules,no ~ font=\bfseries\tiny,colour=green!50!gray,goal ~ ht=.67\textheight]
+  \item  Summarise ~ your ~ analysis.
+    \fillwithnolines*
+    \clearpage
+}
+\end{enumerate}
+\ExplSyntaxOff
+\END
+
+\end{document}
+%%
+%% End of file `fillwith-test.tex'.
+% vim: ts=2:sw=2:

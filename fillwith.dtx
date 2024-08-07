@@ -29,22 +29,67 @@
 % \iffalse
 %<*driver>
 \RequirePackage{svn-prov}
-\ProvidesFileSVN{$Id: fillwith.dtx 10191 2024-08-01 02:29:38Z cfrees $}[v0.0 \revinfo][\filename: \filebase]
+\ProvidesFileSVN{$Id: fillwith.dtx 10198 2024-08-07 20:46:53Z cfrees $}[v0.0 \revinfo][\filename: \filebase]
 \DefineFileInfoSVN[fillwith]
 \GetFileInfoSVN*
 % ref. ateb Max Chernoff: https://tex.stackexchange.com/a/723294/ 
 \def\MakePrivateLetters{\makeatletter\ExplSyntaxOn\endlinechar13}
-\documentclass[11pt,british]{ltxdoc}
+\documentclass[british,a4paper]{ltxdoc}
+\usepackage{babel}
+\usepackage[tt={monowidth,lining,tabular},sf={lining,proportional},rm={lining,proportional}]{cfr-lm}
 \usepackage{fillwith}
+\usepackage{parskip}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{xurl}
+% sicrhau hyperindex=false: llwytho CYN bookmark
+\usepackage{hypdoc}% ateb Ulrike Fischer: https://tex.stackexchange.com/a/695555/
+\usepackage{bookmark}
+\usepackage{cleveref}
 \EnableCrossrefs
 \CodelineIndex
 \RecordChanges
-\OnlyDescription
+%^^A \OnlyDescription
 %^^A \ExplSyntaxOn
 %^^A \makeatletter
-\DoNotIndex{\verb,\ProvidesPackageSVN,\NeedsTeXFormat,\ProcessKeyOptions,\ExplSyntaxOn,\ExplSyntaxOff,\RequirePackage,\NeedsTeXFormat,\DefineFileInfoSVN,\GetInfoSVN,\@ifundefined,\@ifl@t@r\ExplLoaderFileDate,\endinput,\PackageError,\PackageWarning,\PackageInfo,\keys_define:nn,\keys_set:nn,\ProcessKeysOptionns}
+\DoNotIndex{\verb,\ProvidesPackageSVN,\NeedsTeXFormat,\ProcessKeyOptions,\ExplSyntaxOn,\ExplSyntaxOff,\RequirePackage,\NeedsTeXFormat,\DefineFileInfoSVN,\GetInfoSVN,\@ifundefined,\@ifl@t@r\ExplLoaderFileDate,\endinput,\PackageError,\PackageWarning,\PackageInfo,\keys_define:nn,\keys_set:nn,\ProcessKeysOptionns,\author,\title,\maketitle,\date,\revinfo,\ProcessKeysOptions,\MessageBreak,\fmtversion,\documentclass,\ExplLoaderFileDate,\filebase,\fileversion,\fileinfo,\filebase:,\filedate,\documentclass,\@ifl@t@r,\begin,\end,\item,\IfFormatAtLeastTF}
 %^^A \makeatother
 %^^A \ExplSyntaxOff
+\definecolor{strawberry}{rgb}{1.000,0.000,0.502}
+\definecolor{blueberry}{rgb}{0.000,0.000,1.000}
+\definecolor{moss}{rgb}{0.000,0.502,0.251}
+\hypersetup{%
+  colorlinks=true,
+  citecolor={moss},
+  extension=pdf,
+  linkcolor={strawberry},
+  linktocpage=true,
+  pdfcreator={TeX},
+  pdfproducer={pdfeTeX},
+  urlcolor={blueberry}%
+}
+\NewDocElement[%
+  idxtype=opt.,
+  idxgroup=options,
+  printtype=\textit{opt.},
+]{Opt}{option}
+\NewDocumentCommand \val { m }
+{%
+  {\ttfamily =\,\meta{#1}}%
+}
+\ExplSyntaxOn
+\NewDocumentCommand \vals { m }
+{
+  {
+    \ttfamily = \, 
+    \clist_use:nn { #1 } { \textbar }
+  }
+} 
+\ExplSyntaxOff
+\setcounter{IndexColumns}{2}
+\makeatletter
+\def\@xobeysp{\leavevmode\penalty100\ }
+\makeatother
 \begin{document}
   \DocInput{\filename}
 \end{document}
@@ -55,16 +100,175 @@
 % \date{\filedate}
 % \maketitle
 % \begin{abstract}
-% A small package originally based on an answer to a question I asked on \TeX{} SE.
+% A small package originally based on \href{https://tex.stackexchange.com/a/241139/}{Harish Kumar's answer} to a question I asked on \TeX{} SE\footnote{%
+%   See \href{https://tex.stackexchange.com/a/241139/}{tex.stackexchange.com/a/241139/}.% 
+% }.
 % The intended purpose was the creation of worksheets for students where I would like \LaTeX{} to use the available vertical space to provide lined areas for answers.
 % Since then, the code has been (partially) rewritten in \pkg{expl3} and extended in response to both my own needs and others' questions on \TeX{} SE.
 % The package aims to do one thing: to fill a vertical space in the same way as, say, \verb|\vfill|, but with some kind of ‘filler’ rather than empty space.
-% Currently, the package supports lines, dotted lines and numbered lines, though the latter should not be used to fill long stretches as it is extremely inefficient.
+% Currently, the package supports solid rules or dotted lines.
 % The remainder of the current line may optionally be filled in the same way and the ‘filler’ may be coloured if desired.
-% \end{abstract}
-% \changes{v1.0}{???}{First public release.}
-% \changes{\fileversion}{\filedate}{}
 % 
+% Lines may optionally be numbered, though the numbered versions should not be used to fill long stretches as they are extremely inefficient.
+% \textbf{Numbered fills are highly experimental and not recommended for use in ‘real’ documents.}
+% That is, it seems to work, but I recommend using an alternative package or solution if you need a reliable numbering mechanism.
+% \end{abstract}
+% 
+% \section{Load}\label{sec:pkg}
+% To use the package simply load it in your preamble in the usual way.
+%
+% \iffalse
+%<*verb>
+% \fi
+\begin{verbatim}
+  \usepackage[<options>]{fillwith}
+\end{verbatim}
+% \iffalse
+%</verb>
+% \fi
+%
+% A small number of options may be specified when loading the package.
+% See \cref{sec:config}.
+%
+% We start with an example in \cref{sec:ee}.
+% \Cref{sec:use} describes the basic commands illustrated in this example.
+% \Cref{sec:config} explains the options used by these commands, together with other customisation features of \pkg{fillwith}.
+%
+% \section{Example}\label{sec:ee}
+%
+% The code below illustrates most package features.
+%
+% \Cref{fig:ee1} demonstrates filling with rules.
+% Note the effect of altering \texttt{fillwith ht} on line-spacing.
+% \begin{figure}
+%   \centering
+%   \fbox{\includegraphics{fillwith-example.pdf}}
+%   \caption{Filling with rules.}\label{fig:ee1}
+% \end{figure}
+%
+% \Cref{fig:ee2} shows dotted fillings.
+% Note the use of \cmd{\fillwithset} to alter the colour.
+% \begin{figure}
+%   \centering
+%   \fbox{\includegraphics[page=2]{fillwith-example.pdf}}
+%   \caption{Filling with dotted lines.}\label{fig:ee2}
+% \end{figure}
+%
+% \Cref{fig:ee3} shows numbered fillings.
+% Note the use of \texttt{goal ht} to divide the available vertical space more-or-less equally. 
+% \begin{figure}
+%   \centering
+%   \fbox{\includegraphics[page=3]{fillwith-example.pdf}}
+%   \caption{Filling with numbered lines.}\label{fig:ee3}
+% \end{figure}
+% 
+% \verbatiminput{fillwith-example.tex}
+% 
+% \section{Usage}\label{sec:use}
+%
+% \DescribeMacro{\fillwith}\oarg{options}
+% \DescribeMacro{\fillwith*}
+% 
+% Fill vertically with current settings, optionally modified by \meta{options}.
+% See \cref{sec:config} for \meta{options}.
+% If used in the middle of a line, the starred form fills to the end of the line first, whereas the unstarred form does not.
+%
+% \DescribeMacro{\fillwithrules}\oarg{line-spacing}
+% \DescribeMacro{\fillwithrules*}
+%
+% Convenience wrappers which just set \texttt{style = rules} and set the line-spacing to \meta{line-spacing}.
+% These macros do nothing which cannot be done using \cmd{\fillwith} and \cmd{\fillwith*}.
+% 
+% \DescribeMacro{\fillwithdottedlines}\oarg{line-spacing}
+% \DescribeMacro{\fillwithdottedlines*}
+%
+% Convenience wrappers which just set \texttt{style = dots} and set the line-spacing to \meta{line-spacing}.
+% These macros do nothing which cannot be done using \cmd{\fillwith} and \cmd{\fillwith*}.
+% 
+% \DescribeMacro{\fillwithnolines}\oarg{options}
+% \DescribeMacro{\fillwithnolines*}
+%
+% Fill vertically with current settings, numbering each complete line, after optionally setting \meta{options}.
+% Numbering \textbf{requires} use of these commands, as opposed to the generic \cmd{\fillwith}/\cmd{\fillwith*}.
+% 
+% \section{Customisation}\label{sec:config}
+%
+% Options can be set per use, locally or globally.
+% A small number of options are implemented as package options (\cref{sec:pkg}).
+%
+% \DescribeMacro{\fillwithset}\marg{options}
+% Set local or global defaults.
+% 
+% \DescribeOpt{colour}\val{colour name}
+% \DescribeOpt{color}
+% \DescribeOpt{lliw}
+%
+% Colour to be used for (solid) rules.
+%
+% Initially \texttt{gray}.
+% Available as a package option.
+%
+% \DescribeOpt{dotted color}\val{colour name}
+% \DescribeOpt{dotted colour}
+%
+% Colour to be used for dotted lines.
+%
+% Initially \texttt{black}.
+% Available as a package option.
+%
+% \DescribeOpt{cont}\vals{true,false}
+%
+% Whether to fill the remainder of any current line.
+% Generally, users will probably prefer to use the starred command forms for local usage, but this option permits modification of the package default on a local or global basis.
+%
+% Initially \texttt{false}.
+% Default is \texttt{true}.
+%
+% \DescribeOpt{fillwith~ht}\val{real positive number expressed as decimal}
+%
+% Multiplication factor for line-spacing.
+% Typically, hand-written content requires greater spacing than typewritten content.
+% This option scales the standard line-spacing.
+%
+% Initially \texttt{2}, which is also the default value.
+% Decimal values such as \texttt{1.5} are permitted.
+%
+% \DescribeOpt{goal ~ ht}\val{dimension}
+%
+% Used only by \cmd{\fillwithnolines} and \cmd{\fillwithnolines*}.
+% Sets the target dimension to fill with numbered lines.
+% If unspecified, the code tries to fill the remaining vertical space on the current page.
+% If more than one use of a \pkg{fillwith} macro is used on a single page, this option \textbf{must} be used for numbered fills to prevent a single instance taking (almost) all available space.
+% In contrast, multiple unnumbered fills can coexist on the same page without issue --- the available space will simply be divided equally between them.
+%
+% Initially unset.
+% No default.
+%
+% \DescribeOpt{no ~ font}\val{font switches}
+%
+% Font switches to apply when typesetting numbers for numbered fills.
+%
+% Initially \cmd{\normalfont}\cmd{\normalsize}, which is also the default value.
+% Note the commands used here should be switches rather than text commands -- for example, use \cmd{\bfseries} rather than \cmd{\textbf} --- since the commands should not expect an argument.
+%
+% \DescribeOpt{style}\vals{rule,dots,line,lines,rules}
+%
+% Style of fill.
+% \texttt{rule}, \texttt{line}, \texttt{rules} and \texttt{lines} are synonyms which all denote solid rules or lines.
+% \texttt{dots} uses dotted lines rather than solid rules.
+% The dots are slightly more densely packed than the standard used for dotted fills by the standard classes, as these seem a bit too widely spaced to provide ideal guidelines.
+%
+% Initially \texttt{dots}, which is also the default value.
+%
+% If an unknown value is used, the code will attempt to use two macros derived from that value.
+% The first is constructed simply by preceding \meta{value} with a backslash and the second by also appending \texttt{part}.
+% For example, if \texttt{style}\val{mystyle} is used, the code will try to use \cs{mystyle} and \cs{mystylepart} for complete and partial lines.
+% In theory, this supports filling with somewhat arbitrary content, but the implementation is untested and \textbf{should not be used in real documents}.
+%
+% 
+% \changes{v0.0}{???}{First public release.}
+% \changes{\fileversion}{\filedate}{}
+%  
 %
 % \MaybeStop{%
 % \PrintChanges
@@ -82,7 +286,7 @@
 %    \begin{macrocode}
 \NeedsTeXFormat{LaTeX2e}[2021-11-15]
 \RequirePackage{svn-prov}
-\ProvidesPackageSVN[\filebase.sty]{$Id: fillwith.dtx 10191 2024-08-01 02:29:38Z cfrees $}[v0.0 \revinfo][\filebase: fill vertically with non-space]
+\ProvidesPackageSVN[\filebase.sty]{$Id: fillwith.dtx 10198 2024-08-07 20:46:53Z cfrees $}[v0.0 \revinfo][\filebase: fill vertically with non-space]
 % this is needed only because l3doc overwrites \fileversion and \filedate
 % neither ltxdoc nor doc does this
 \DefineFileInfoSVN
@@ -211,9 +415,17 @@
 }
 % END \__fillwith_dottedfill:
 % END fns
+%    \end{macrocode}
+% \begin{macro}{\fillwithset}
+% Wrapper command for configuration.
+% Most global or local customisation will use this as most keys are not valid package options.
+%    \begin{macrocode}
 \NewDocumentCommand\fillwithset { +m }{
   \keys_set:nn { fillwith } { #1 }
 }
+%    \end{macrocode}
+% \end{macro}
+%    \begin{macrocode}
 % BEGIN keys (+)
 \keys_define:nn { fillwith }
 {
@@ -256,7 +468,7 @@
   style .initial:n = dots,
 }
 % END keys (+)
-
+% 
 % BEGIN \__fillwith_fill:
 % ref: https://tex.stackexchange.com/a/241139/ Harish Kumar
 \cs_new_protected_nopar:Nn \__fillwith_fill:
@@ -312,6 +524,10 @@
 }
 % END \__fillwith_measures:
 % BEGIN fillwith
+%    \end{macrocode}
+% \begin{macro}{\fillwith}
+% The package is basically this macro.
+%    \begin{macrocode}
 \NewDocumentCommand \fillwith { s o }
 {
   \group_begin:
@@ -328,8 +544,37 @@
     \__fillwith_fill:
   \group_end:
 }
+%    \end{macrocode}
+% \end{macro}
+%    \begin{macrocode}
 % END fillwith
+% BEGIN fillwithrules
+%    \end{macrocode}
+% \begin{macro}{\fillwithrules}
+% Simple convenience wrapper with simplified syntax for (solid) rules.
+%    \begin{macrocode}
+\NewDocumentCommand \fillwithrules { s O { 2 } }
+{
+  \group_begin:
+    \IfBooleanTF { #1 }
+    {
+      \bool_set_true:N \l__fillwith_cont_bool
+    }{
+      \bool_set_false:N \l__fillwith_cont_bool
+    }
+    \keys_set:nn { fillwith } { style = rules, fillwith~ht=#2 }
+    \__fillwith_fill:
+  \group_end:
+}
+%    \end{macrocode}
+% \end{macro}
+%    \begin{macrocode}
+% END fillwithrules
 % BEGIN fillwithdottedlines
+%    \end{macrocode}
+% \begin{macro}{\fillwithdottedlines}
+% Simple convenience wrapper with simplified syntax for dotted lines.
+%    \begin{macrocode}
 \NewDocumentCommand \fillwithdottedlines { s O { 2 } }
 {
   \group_begin:
@@ -339,10 +584,14 @@
     }{
       \bool_set_false:N \l__fillwith_cont_bool
     }
+    \colorlet{fillwithcolour}{fillwithdottedcolour}
     \keys_set:nn { fillwith } { style = dots, fillwith~ht=#2 }
     \__fillwith_fill:
   \group_end:
 }
+%    \end{macrocode}
+% \end{macro}
+%    \begin{macrocode}
 % END fillwithdottedlines
 % BEGIN fillwithnolines
 \cs_new_protected:Nn \__fillwith_nos: % rhybudd: ARAF ! SLOW!
@@ -365,7 +614,7 @@
       \int_gincr:N \g__fillwith_cnt_int
       % \vcoffin_set:Nnn \l__fillwith_tmpa_coffin  { 1.5em} 
       % {
-      %   \int_to_arabic:n { \g__fillwith_cnt_int } 
+      %   \l__fillwith_no_font_tl \int_to_arabic:n { \g__fillwith_cnt_int } 
       % }
       % \coffin_mark_handle:Nnnn \l__fillwith_tmpa_coffin {B} {l} { red }
       % \coffin_mark_handle:Nnnn \l__fillwith_tmpa_coffin {b} {l} { green }
@@ -399,7 +648,7 @@
     \int_gincr:N \g__fillwith_cnt_int
     \vcoffin_set:Nnn \l__fillwith_tmpa_coffin  {1.5em} 
     {
-      \int_to_arabic:n { \g__fillwith_cnt_int } 
+      \l__fillwith_no_font_tl \int_to_arabic:n { \g__fillwith_cnt_int } 
     }
     \coffin_attach:NnnNnnnn \l__fillwith_lines_coffin {B} {r} \l__fillwith_tmpa_coffin {B} {l} {2.5pt} {\c_zero_dim}
   }
@@ -407,6 +656,10 @@
   \para_end:
   \normalcolor
 }
+%    \end{macrocode}
+% \begin{macro}{\fillwithnolines}
+% Provisional experimental macro for numbered fill.
+%    \begin{macrocode}
 \NewDocumentCommand \fillwithnolines { s O { } }
 {
   \group_begin:
@@ -420,22 +673,28 @@
     \__fillwith_nos:
   \group_end:
 }
+%    \end{macrocode}
+% \end{macro}
+%    \begin{macrocode}
 % END fillwithnolines
 \ExplSyntaxOff
-
 %    \end{macrocode}
 % \iffalse
 %</sty>
 % \fi
 % 
-% \subsection{??}
+% \subsection{Demonstration}
 % 
+% Simple example to demonstrate usage.
+%
 % \iffalse
 %<*ee>
 % \fi
 %    \begin{macrocode}
-\documentclass[british,a4paper]{article}
+\listfiles
+\documentclass[british,a6paper]{article}
 \usepackage{babel}
+\usepackage[scale=.85,marginparwidth=0pt,marginparsep=0pt]{geometry}
 \usepackage{fillwith}
 \usepackage{cfr-lm}
 \begin{document}
@@ -444,18 +703,21 @@
 \maketitle
 \begin{enumerate}
   \item What is the answer to the question?
-    \fillwith[style=rule]
-  \item What is the answer to the question?
-
-    \fillwith[style=rule]
+    \fillwithrules
   \item How did you answer the previous question?
     \fillwith*[style=line]
+  \item Why answer?
+
+    \fillwith*[style=rule,fillwith ht=1.25,colour=blue!40!cyan]
     \clearpage
   \item Evaluate your responses so far.
     \fillwithdottedlines
   \item Evaluate your responses so far.
 
-    \fillwithdottedlines
+    {%
+      \fillwithset{dotted colour=magenta}%
+      \fillwithdottedlines[1.5]
+    }
   \item Criticise your evaluation.
     \fillwithdottedlines*
     \clearpage
@@ -463,7 +725,7 @@
     \fillwithnolines[goal ht = .33\textheight]
   \item Assess your answers.
 
-    \fillwithnolines[goal ht = .67\textheight]
+    \fillwithnolines[style=rules,no font=\bfseries\tiny,colour=green!50!gray,goal ht = .67\textheight]
   \item Summarise your analysis.
     \fillwithnolines*
 \end{enumerate}

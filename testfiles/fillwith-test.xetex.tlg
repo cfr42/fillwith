@@ -1,0 +1,966 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+============================================================
+TEST 1: fillwithrules-test
+============================================================
+Completed box being shipped out [1]
+\vbox(633.0+0.0)x407.0
+.\glue 16.0
+.\vbox(617.0+0.0)x345.0, shifted 62.0
+..\vbox(12.0+0.0)x345.0, glue set 12.0fil
+...\glue 0.0 plus 1.0fil
+...\hbox(0.0+0.0)x345.0
+....\special{color push gray 0}
+....\hbox(0.0+0.0)x345.0
+....\special{color pop}
+..\glue 25.0
+..\glue(\lineskip) 0.0
+..\vbox(550.0+0.0)x345.0, glue set 157.81665fill
+...\write-{}
+...\special{color push gray 0}
+...\glue(\topskip) 0.0
+...\hbox(16.79993+7.20007)x320.0, glue set 160.93fil, shifted 25.0
+....\hbox(6.66+0.0)x0.0
+.....\glue 0.0
+.....\glue -20.0
+.....\glue -5.0
+.....\hbox(6.66+0.0)x20.0, glue set 20.0fil
+......\special{color push gray 0}
+......\glue 0.0 plus 1.0fil minus 1.0fil
+......\hbox(6.66+0.0)x0.0, glue set - 7.78fil
+.......\glue 0.0 plus 1.0fil minus 1.0fil
+.......\TU/lmr/m/n/10 1.
+......\special{color pop}
+.....\glue 5.0
+....\penalty 0
+....\TU/lmr/m/n/10 What
+....\glue 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 is
+....\glue 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 the
+....\glue 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 answer
+....\glue 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 to
+....\glue 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 the
+....\glue 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 question?
+....\special{color push gray 0.5}
+....\rule(16.79993+7.20007)x0.0
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\xleaders 0.0 plus 1.0fill
+....\vbox(16.79993+7.20007)x345.0
+.....\hbox(16.79993+7.20007)x345.0
+......\hbox(0.0+0.0)x0.0
+......\rule(16.79993+7.20007)x0.0
+......\glue 25.0
+......\rule(0.0+0.4)x320.0
+......\penalty 10000
+......\glue(\parfillskip) 0.0 plus 1.0fil
+......\glue(\rightskip) 0.0
+...\special{color push gray 0}
+...\special{color pop}
+...\special{color pop}
+...\penalty -51
+...\glue 4.0 plus 2.0 minus 1.0
+...\glue(\parskip) 4.0 plus 2.0 minus 1.0
+...\glue(\parskip) 0.0
+...\glue(\lineskip) 0.0
+...\hbox(16.79993+7.20007)x320.0, glue set 129.78fill, shifted 25.0
+....\hbox(6.66+0.0)x0.0
+.....\glue 0.0
+.....\glue -20.0
+.....\glue -5.0
+.....\hbox(6.66+0.0)x20.0, glue set 20.0fil
+......\special{color push gray 0}
+......\glue 0.0 plus 1.0fil minus 1.0fil
+......\hbox(6.66+0.0)x0.0, glue set - 7.78fil
+.......\glue 0.0 plus 1.0fil minus 1.0fil
+.......\TU/lmr/m/n/10 2.
+......\special{color pop}
+.....\glue 5.0
+....\penalty 0
+....\TU/lmr/m/n/10 How
+....\glue 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 did
+....\glue 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 you
+....\glue 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 answer
+....\glue 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 the
+....\glue 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 previous
+....\glue 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 question?
+....\special{color push gray 0.5}
+....\leaders 0.0 plus 1.0fill
+.....\hbox(16.79993+7.20007)x0.1
+......\rule(8.39996+3.60004)x0.0
+......\rule(0.0+0.4)x0.1
+......\kern 0.0
+....\kern 0.0
+....\rule(16.79993+7.20007)x0.0
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\xleaders 0.0 plus 1.0fill
+....\vbox(16.79993+7.20007)x345.0
+.....\hbox(16.79993+7.20007)x345.0
+......\hbox(0.0+0.0)x0.0
+......\rule(16.79993+7.20007)x0.0
+......\glue 25.0
+......\rule(0.0+0.4)x320.0
+......\penalty 10000
+......\glue(\parfillskip) 0.0 plus 1.0fil
+......\glue(\rightskip) 0.0
+...\special{color push gray 0}
+...\special{color pop}
+...\special{color pop}
+...\penalty -51
+...\glue 4.0 plus 2.0 minus 1.0
+...\glue(\parskip) 4.0 plus 2.0 minus 1.0
+...\glue(\parskip) 0.0
+...\glue(\lineskip) 1.0
+...\hbox(7.05+2.04999)x320.0, glue set 261.31fil, shifted 25.0
+....\hbox(6.66+0.21999)x0.0
+.....\glue 0.0
+.....\glue -20.0
+.....\glue -5.0
+.....\hbox(6.66+0.21999)x20.0, glue set 20.0fil
+......\special{color push gray 0}
+......\glue 0.0 plus 1.0fil minus 1.0fil
+......\hbox(6.66+0.21999)x0.0, glue set - 7.78fil
+.......\glue 0.0 plus 1.0fil minus 1.0fil
+.......\TU/lmr/m/n/10 3.
+......\special{color pop}
+.....\glue 5.0
+....\penalty 0
+....\TU/lmr/m/n/10 Why
+....\glue 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 answer?
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\special{color push rgb 0 0.6 1}
+...\glue 4.50005
+...\xleaders 0.0 plus 1.0fill
+....\vbox(10.49995+4.50005)x345.0
+.....\hbox(10.49995+4.50005)x345.0
+......\hbox(0.0+0.0)x0.0
+......\rule(10.49995+4.50005)x0.0
+......\glue 25.0
+......\rule(0.0+0.4)x320.0
+......\penalty 10000
+......\glue(\parfillskip) 0.0 plus 1.0fil
+......\glue(\rightskip) 0.0
+...\special{color push gray 0}
+...\special{color pop}
+...\special{color pop}
+...\glue -2.04999
+...\glue 0.0 plus 1.0fil
+...\glue 0.0
+...\glue 0.0 plus 0.0001fil
+..\glue(\baselineskip) 23.34
+..\hbox(6.66+0.0)x345.0
+...\special{color push gray 0}
+...\hbox(6.66+0.0)x345.0, glue set 170.0fil
+....\glue 0.0 plus 1.0fil
+....\TU/lmr/m/n/10 1
+....\glue 0.0 plus 1.0fil
+...\special{color pop}
+============================================================
+============================================================
+TEST 2: fillwithdottedlines-test
+============================================================
+Completed box being shipped out [2]
+\vbox(633.0+0.0)x407.0
+.\glue 16.0
+.\vbox(617.0+0.0)x345.0, shifted 62.0
+..\vbox(12.0+0.0)x345.0, glue set 12.0fil
+...\glue 0.0 plus 1.0fil
+...\hbox(0.0+0.0)x345.0
+....\special{color push gray 0}
+....\hbox(0.0+0.0)x345.0
+....\special{color pop}
+..\glue 25.0
+..\glue(\lineskip) 0.0
+..\vbox(550.0+0.0)x345.0, glue set 158.49998fill
+...\write-{}
+...\glue(\topskip) 0.0
+...\hbox(16.79993+7.20007)x320.0, glue set 184.28fil, shifted 25.0
+....\hbox(6.66+0.0)x0.0
+.....\glue 0.0
+.....\glue -20.0
+.....\glue -5.0
+.....\hbox(6.66+0.0)x20.0, glue set 20.0fil
+......\special{color push gray 0}
+......\glue 0.0 plus 1.0fil minus 1.0fil
+......\hbox(6.66+0.0)x0.0, glue set - 7.78fil
+.......\glue 0.0 plus 1.0fil minus 1.0fil
+.......\TU/lmr/m/n/10 1.
+......\special{color pop}
+.....\glue 5.0
+....\penalty 0
+....\TU/lmr/m/n/10 Evaluate
+....\glue 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 your
+....\glue 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 responses
+....\glue 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 so
+....\glue 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 far.
+....\special{color push gray 0}
+....\rule(16.79993+7.20007)x0.0
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\xleaders 0.0 plus 1.0fill
+....\vbox(16.79993+7.20007)x345.0
+.....\hbox(16.79993+7.20007)x345.0, glue set 320.0fill
+......\hbox(0.0+0.0)x0.0
+......\rule(16.79993+7.20007)x0.0
+......\glue 25.0
+......\leaders 0.0 plus 1.0fill
+.......\hbox(1.06+0.0)x3.30002, glue set 0.26001fil
+........\glue 0.0 plus 1.0fil minus 1.0fil
+........\TU/lmr/m/n/10 .
+........\glue 0.0 plus 1.0fil minus 1.0fil
+......\kern 0.0
+......\penalty 10000
+......\glue(\parfillskip) 0.0 plus 1.0fil
+......\glue(\rightskip) 0.0
+...\special{color push gray 0}
+...\special{color pop}
+...\special{color pop}
+...\penalty -51
+...\glue 4.0 plus 2.0 minus 1.0
+...\glue(\parskip) 4.0 plus 2.0 minus 1.0
+...\glue(\parskip) 0.0
+...\glue(\lineskip) 1.0
+...\hbox(7.05+2.04999)x320.0, glue set 184.28fil, shifted 25.0
+....\hbox(6.66+0.0)x0.0
+.....\glue 0.0
+.....\glue -20.0
+.....\glue -5.0
+.....\hbox(6.66+0.0)x20.0, glue set 20.0fil
+......\special{color push gray 0}
+......\glue 0.0 plus 1.0fil minus 1.0fil
+......\hbox(6.66+0.0)x0.0, glue set - 7.78fil
+.......\glue 0.0 plus 1.0fil minus 1.0fil
+.......\TU/lmr/m/n/10 2.
+......\special{color pop}
+.....\glue 5.0
+....\penalty 0
+....\TU/lmr/m/n/10 Evaluate
+....\glue 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 your
+....\glue 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 responses
+....\glue 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 so
+....\glue 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 far.
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\special{color push cmyk 0 1 0 0}
+...\glue 5.40005
+...\xleaders 0.0 plus 1.0fill
+....\vbox(12.59995+5.40005)x345.0
+.....\hbox(12.59995+5.40005)x345.0, glue set 320.0fill
+......\hbox(0.0+0.0)x0.0
+......\rule(12.59995+5.40005)x0.0
+......\glue 25.0
+......\leaders 0.0 plus 1.0fill
+.......\hbox(1.06+0.0)x3.30002, glue set 0.26001fil
+........\glue 0.0 plus 1.0fil minus 1.0fil
+........\TU/lmr/m/n/10 .
+........\glue 0.0 plus 1.0fil minus 1.0fil
+......\kern 0.0
+......\penalty 10000
+......\glue(\parfillskip) 0.0 plus 1.0fil
+......\glue(\rightskip) 0.0
+...\special{color push gray 0}
+...\special{color pop}
+...\special{color pop}
+...\penalty -51
+...\glue 4.0 plus 2.0 minus 1.0
+...\glue(\parskip) 4.0 plus 2.0 minus 1.0
+...\glue(\parskip) 0.0
+...\glue(\lineskip) 0.0
+...\hbox(16.79993+7.20007)x320.0, glue set 210.16fill, shifted 25.0
+....\hbox(6.66+0.21999)x0.0
+.....\glue 0.0
+.....\glue -20.0
+.....\glue -5.0
+.....\hbox(6.66+0.21999)x20.0, glue set 20.0fil
+......\special{color push gray 0}
+......\glue 0.0 plus 1.0fil minus 1.0fil
+......\hbox(6.66+0.21999)x0.0, glue set - 7.78fil
+.......\glue 0.0 plus 1.0fil minus 1.0fil
+.......\TU/lmr/m/n/10 3.
+......\special{color pop}
+.....\glue 5.0
+....\penalty 0
+....\TU/lmr/m/n/10 Criticise
+....\glue 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 your
+....\glue 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 evaluation.
+....\special{color push gray 0}
+....\leaders 0.0 plus 1.0fill
+.....\hbox(16.79993+7.20007)x3.30002
+......\rule(8.39996+3.60004)x0.0
+......\hbox(1.06+0.0)x3.30002, glue set 0.26001fil
+.......\glue 0.0 plus 1.0fil minus 1.0fil
+.......\TU/lmr/m/n/10 .
+.......\glue 0.0 plus 1.0fil minus 1.0fil
+......\kern 0.0
+....\kern 0.0
+....\rule(16.79993+7.20007)x0.0
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\xleaders 0.0 plus 1.0fill
+....\vbox(16.79993+7.20007)x345.0
+.....\hbox(16.79993+7.20007)x345.0, glue set 320.0fill
+......\hbox(0.0+0.0)x0.0
+......\rule(16.79993+7.20007)x0.0
+......\glue 25.0
+......\leaders 0.0 plus 1.0fill
+.......\hbox(1.06+0.0)x3.30002, glue set 0.26001fil
+........\glue 0.0 plus 1.0fil minus 1.0fil
+........\TU/lmr/m/n/10 .
+........\glue 0.0 plus 1.0fil minus 1.0fil
+......\kern 0.0
+......\penalty 10000
+......\glue(\parfillskip) 0.0 plus 1.0fil
+......\glue(\rightskip) 0.0
+...\special{color push gray 0}
+...\special{color pop}
+...\special{color pop}
+...\glue -5.0
+...\glue 0.0 plus 1.0fil
+...\glue 0.0
+...\glue 0.0 plus 0.0001fil
+..\glue(\baselineskip) 23.34
+..\hbox(6.66+0.0)x345.0
+...\special{color push gray 0}
+...\hbox(6.66+0.0)x345.0, glue set 170.0fil
+....\glue 0.0 plus 1.0fil
+....\TU/lmr/m/n/10 2
+....\glue 0.0 plus 1.0fil
+...\special{color pop}
+============================================================
+============================================================
+TEST 3: fillwithno-test
+============================================================
+Completed box being shipped out [3]
+\vbox(633.0+0.21999)x407.0
+.\glue 16.0
+.\vbox(617.0+0.21999)x345.0, shifted 62.0
+..\vbox(12.0+0.0)x345.0, glue set 12.0fil
+...\glue 0.0 plus 1.0fil
+...\hbox(0.0+0.0)x345.0
+....\special{color push gray 0}
+....\hbox(0.0+0.0)x345.0
+....\special{color pop}
+..\glue 25.0
+..\glue(\lineskip) 0.0
+..\vbox(550.0+0.0)x345.0, glue set 24.58731fil
+...\write-{}
+...\glue(\topskip) 0.0
+...\hbox(16.79993+7.20007)x320.0, glue set 229.64fil, shifted 25.0
+....\hbox(6.66+0.0)x0.0
+.....\glue 0.0
+.....\glue -20.0
+.....\glue -5.0
+.....\hbox(6.66+0.0)x20.0, glue set 20.0fil
+......\special{color push gray 0}
+......\glue 0.0 plus 1.0fil minus 1.0fil
+......\hbox(6.66+0.0)x0.0, glue set - 7.78fil
+.......\glue 0.0 plus 1.0fil minus 1.0fil
+.......\TU/lmr/m/n/10 1.
+......\special{color pop}
+.....\glue 5.0
+....\penalty 0
+....\TU/lmr/m/n/10 Assess
+....\glue 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 your
+....\glue 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 answers.
+....\special{color push gray 0.5}
+....\rule(16.79993+7.20007)x0.0
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\glue(\parskip) 4.0 plus 2.0 minus 1.0
+...\glue(\parskip) 0.0
+...\glue(\lineskip) 0.0
+...\hbox(112.79993+7.20007)x345.0
+....\hbox(0.0+0.0)x0.0
+....\hbox(112.79993+7.20007)x345.0
+.....\hbox(0.0+0.0)x0.0
+.....\kern 0.0
+.....\kern 25.0
+.....\hbox(16.79993+103.20007)x320.0, shifted -96.0
+......\hbox(16.79993+103.20007)x320.0
+.......\hbox(16.79993+79.20007)x320.0
+........\hbox(16.79993+79.20007)x320.0
+.........\hbox(16.79993+55.20007)x320.0
+..........\hbox(16.79993+55.20007)x320.0
+...........\hbox(16.79993+31.20007)x320.0
+............\hbox(16.79993+31.20007)x320.0
+.............\hbox(16.79993+7.20007)x320.0
+..............\vbox(16.79993+7.20007)x320.0
+...............\hbox(16.79993+7.20007)x320.0, glue set 320.0fill
+................\hbox(0.0+0.0)x0.0
+................\rule(16.79993+7.20007)x0.0
+................\glue 0.0
+................\leaders 0.0 plus 1.0fill
+.................\hbox(1.06+0.0)x3.30002, glue set 0.26001fil
+..................\glue 0.0 plus 1.0fil minus 1.0fil
+..................\TU/lmr/m/n/10 .
+..................\glue 0.0 plus 1.0fil minus 1.0fil
+................\kern 0.0
+................\penalty 10000
+................\glue(\parfillskip) 0.0 plus 1.0fil
+................\glue(\rightskip) 0.0
+..............\kern -320.0
+..............\kern 322.5
+..............\vbox(6.66+0.0)x15.0
+...............\hbox(6.66+0.0)x15.0, glue set 10.0fil
+................\hbox(0.0+0.0)x0.0
+................\TU/lmr/m/n/10 1
+................\penalty 10000
+................\glue(\parfillskip) 0.0 plus 1.0fil
+................\glue(\rightskip) 0.0
+.............\kern -320.0
+.............\kern 0.0
+.............\vbox(16.79993+7.20007)x320.0, shifted 24.0
+..............\hbox(16.79993+7.20007)x320.0, glue set 320.0fill
+...............\hbox(0.0+0.0)x0.0
+...............\rule(16.79993+7.20007)x0.0
+...............\glue 0.0
+...............\leaders 0.0 plus 1.0fill
+................\hbox(1.06+0.0)x3.30002, glue set 0.26001fil
+.................\glue 0.0 plus 1.0fil minus 1.0fil
+.................\TU/lmr/m/n/10 .
+.................\glue 0.0 plus 1.0fil minus 1.0fil
+...............\kern 0.0
+...............\penalty 10000
+...............\glue(\parfillskip) 0.0 plus 1.0fil
+...............\glue(\rightskip) 0.0
+............\kern -320.0
+............\kern 322.5
+............\vbox(6.66+0.0)x15.0, shifted 24.0
+.............\hbox(6.66+0.0)x15.0, glue set 10.0fil
+..............\hbox(0.0+0.0)x0.0
+..............\TU/lmr/m/n/10 2
+..............\penalty 10000
+..............\glue(\parfillskip) 0.0 plus 1.0fil
+..............\glue(\rightskip) 0.0
+...........\kern -320.0
+...........\kern 0.0
+...........\vbox(16.79993+7.20007)x320.0, shifted 48.0
+............\hbox(16.79993+7.20007)x320.0, glue set 320.0fill
+.............\hbox(0.0+0.0)x0.0
+.............\rule(16.79993+7.20007)x0.0
+.............\glue 0.0
+.............\leaders 0.0 plus 1.0fill
+..............\hbox(1.06+0.0)x3.30002, glue set 0.26001fil
+...............\glue 0.0 plus 1.0fil minus 1.0fil
+...............\TU/lmr/m/n/10 .
+...............\glue 0.0 plus 1.0fil minus 1.0fil
+.............\kern 0.0
+.............\penalty 10000
+.............\glue(\parfillskip) 0.0 plus 1.0fil
+.............\glue(\rightskip) 0.0
+..........\kern -320.0
+..........\kern 322.5
+..........\vbox(6.66+0.21999)x15.0, shifted 48.0
+...........\hbox(6.66+0.21999)x15.0, glue set 10.0fil
+............\hbox(0.0+0.0)x0.0
+............\TU/lmr/m/n/10 3
+............\penalty 10000
+............\glue(\parfillskip) 0.0 plus 1.0fil
+............\glue(\rightskip) 0.0
+.........\kern -320.0
+.........\kern 0.0
+.........\vbox(16.79993+7.20007)x320.0, shifted 72.0
+..........\hbox(16.79993+7.20007)x320.0, glue set 320.0fill
+...........\hbox(0.0+0.0)x0.0
+...........\rule(16.79993+7.20007)x0.0
+...........\glue 0.0
+...........\leaders 0.0 plus 1.0fill
+............\hbox(1.06+0.0)x3.30002, glue set 0.26001fil
+.............\glue 0.0 plus 1.0fil minus 1.0fil
+.............\TU/lmr/m/n/10 .
+.............\glue 0.0 plus 1.0fil minus 1.0fil
+...........\kern 0.0
+...........\penalty 10000
+...........\glue(\parfillskip) 0.0 plus 1.0fil
+...........\glue(\rightskip) 0.0
+........\kern -320.0
+........\kern 322.5
+........\vbox(6.77+0.0)x15.0, shifted 72.0
+.........\hbox(6.77+0.0)x15.0, glue set 10.0fil
+..........\hbox(0.0+0.0)x0.0
+..........\TU/lmr/m/n/10 4
+..........\penalty 10000
+..........\glue(\parfillskip) 0.0 plus 1.0fil
+..........\glue(\rightskip) 0.0
+.......\kern -320.0
+.......\kern 0.0
+.......\vbox(16.79993+7.20007)x320.0, shifted 96.0
+........\hbox(16.79993+7.20007)x320.0, glue set 320.0fill
+.........\hbox(0.0+0.0)x0.0
+.........\rule(16.79993+7.20007)x0.0
+.........\glue 0.0
+.........\leaders 0.0 plus 1.0fill
+..........\hbox(1.06+0.0)x3.30002, glue set 0.26001fil
+...........\glue 0.0 plus 1.0fil minus 1.0fil
+...........\TU/lmr/m/n/10 .
+...........\glue 0.0 plus 1.0fil minus 1.0fil
+.........\kern 0.0
+.........\penalty 10000
+.........\glue(\parfillskip) 0.0 plus 1.0fil
+.........\glue(\rightskip) 0.0
+......\kern -320.0
+......\kern 322.5
+......\vbox(6.66+0.21999)x15.0, shifted 96.0
+.......\hbox(6.66+0.21999)x15.0, glue set 10.0fil
+........\hbox(0.0+0.0)x0.0
+........\TU/lmr/m/n/10 5
+........\penalty 10000
+........\glue(\parfillskip) 0.0 plus 1.0fil
+........\glue(\rightskip) 0.0
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\special{color push gray 0}
+...\special{color pop}
+...\special{color pop}
+...\penalty -51
+...\glue 4.0 plus 2.0 minus 1.0
+...\glue(\parskip) 4.0 plus 2.0 minus 1.0
+...\glue(\parskip) 0.0
+...\glue(\lineskip) 1.0
+...\hbox(7.16+2.04999)x320.0, glue set 229.64fil, shifted 25.0
+....\hbox(6.66+0.0)x0.0
+.....\glue 0.0
+.....\glue -20.0
+.....\glue -5.0
+.....\hbox(6.66+0.0)x20.0, glue set 20.0fil
+......\special{color push gray 0}
+......\glue 0.0 plus 1.0fil minus 1.0fil
+......\hbox(6.66+0.0)x0.0, glue set - 7.78fil
+.......\glue 0.0 plus 1.0fil minus 1.0fil
+.......\TU/lmr/m/n/10 2.
+......\special{color pop}
+.....\glue 5.0
+....\penalty 0
+....\TU/lmr/m/n/10 Assess
+....\glue 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 your
+....\glue 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 answers.
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\special{color push rgb 0.25 0.75 0.25}
+...\glue 7.20007
+...\glue(\parskip) 4.0 plus 2.0 minus 1.0
+...\glue(\parskip) 0.0
+...\glue(\lineskip) 0.0
+...\hbox(160.79993+7.20007)x320.0, shifted 25.0
+....\hbox(0.0+0.0)x0.0
+....\hbox(160.79993+7.20007)x320.0
+.....\hbox(0.0+0.0)x0.0
+.....\kern 0.0
+.....\kern 0.0
+.....\hbox(16.79993+151.20007)x320.0, shifted -144.0
+......\hbox(16.79993+151.20007)x320.0
+.......\hbox(16.79993+127.20007)x320.0
+........\hbox(16.79993+127.20007)x320.0
+.........\hbox(16.79993+103.20007)x320.0
+..........\hbox(16.79993+103.20007)x320.0
+...........\hbox(16.79993+79.20007)x320.0
+............\hbox(16.79993+79.20007)x320.0
+.............\hbox(16.79993+55.20007)x320.0
+..............\hbox(16.79993+55.20007)x320.0
+...............\hbox(16.79993+31.20007)x320.0
+................\hbox(16.79993+31.20007)x320.0
+.................\hbox(16.79993+7.20007)x320.0
+..................\vbox(16.79993+7.20007)x320.0
+...................\hbox(16.79993+7.20007)x320.0
+....................\hbox(0.0+0.0)x0.0
+....................\rule(16.79993+7.20007)x0.0
+....................\glue 0.0
+....................\rule(0.0+0.4)x320.0
+....................\penalty 10000
+....................\glue(\parfillskip) 0.0 plus 1.0fil
+....................\glue(\rightskip) 0.0
+..................\kern -320.0
+..................\kern 322.5
+..................\vbox(3.305+0.08499)x15.0
+...................\hbox(3.305+0.08499)x15.0, glue set 11.21fil
+....................\hbox(0.0+0.0)x0.0
+....................\TU/lmr/bx/n/5 6
+....................\penalty 10000
+....................\glue(\parfillskip) 0.0 plus 1.0fil
+....................\glue(\rightskip) 0.0
+.................\kern -320.0
+.................\kern 0.0
+.................\vbox(16.79993+7.20007)x320.0, shifted 24.0
+..................\hbox(16.79993+7.20007)x320.0
+...................\hbox(0.0+0.0)x0.0
+...................\rule(16.79993+7.20007)x0.0
+...................\glue 0.0
+...................\rule(0.0+0.4)x320.0
+...................\penalty 10000
+...................\glue(\parfillskip) 0.0 plus 1.0fil
+...................\glue(\rightskip) 0.0
+................\kern -320.0
+................\kern 322.5
+................\vbox(3.335+0.08499)x15.0, shifted 24.0
+.................\hbox(3.335+0.08499)x15.0, glue set 11.21fil
+..................\hbox(0.0+0.0)x0.0
+..................\TU/lmr/bx/n/5 7
+..................\penalty 10000
+..................\glue(\parfillskip) 0.0 plus 1.0fil
+..................\glue(\rightskip) 0.0
+...............\kern -320.0
+...............\kern 0.0
+...............\vbox(16.79993+7.20007)x320.0, shifted 48.0
+................\hbox(16.79993+7.20007)x320.0
+.................\hbox(0.0+0.0)x0.0
+.................\rule(16.79993+7.20007)x0.0
+.................\glue 0.0
+.................\rule(0.0+0.4)x320.0
+.................\penalty 10000
+.................\glue(\parfillskip) 0.0 plus 1.0fil
+.................\glue(\rightskip) 0.0
+..............\kern -320.0
+..............\kern 322.5
+..............\vbox(3.305+0.08499)x15.0, shifted 48.0
+...............\hbox(3.305+0.08499)x15.0, glue set 11.21fil
+................\hbox(0.0+0.0)x0.0
+................\TU/lmr/bx/n/5 8
+................\penalty 10000
+................\glue(\parfillskip) 0.0 plus 1.0fil
+................\glue(\rightskip) 0.0
+.............\kern -320.0
+.............\kern 0.0
+.............\vbox(16.79993+7.20007)x320.0, shifted 72.0
+..............\hbox(16.79993+7.20007)x320.0
+...............\hbox(0.0+0.0)x0.0
+...............\rule(16.79993+7.20007)x0.0
+...............\glue 0.0
+...............\rule(0.0+0.4)x320.0
+...............\penalty 10000
+...............\glue(\parfillskip) 0.0 plus 1.0fil
+...............\glue(\rightskip) 0.0
+............\kern -320.0
+............\kern 322.5
+............\vbox(3.305+0.08499)x15.0, shifted 72.0
+.............\hbox(3.305+0.08499)x15.0, glue set 11.21fil
+..............\hbox(0.0+0.0)x0.0
+..............\TU/lmr/bx/n/5 9
+..............\penalty 10000
+..............\glue(\parfillskip) 0.0 plus 1.0fil
+..............\glue(\rightskip) 0.0
+...........\kern -320.0
+...........\kern 0.0
+...........\vbox(16.79993+7.20007)x320.0, shifted 96.0
+............\hbox(16.79993+7.20007)x320.0
+.............\hbox(0.0+0.0)x0.0
+.............\rule(16.79993+7.20007)x0.0
+.............\glue 0.0
+.............\rule(0.0+0.4)x320.0
+.............\penalty 10000
+.............\glue(\parfillskip) 0.0 plus 1.0fil
+.............\glue(\rightskip) 0.0
+..........\kern -320.0
+..........\kern 322.5
+..........\vbox(3.305+0.08499)x15.0, shifted 96.0
+...........\hbox(3.305+0.08499)x15.0, glue set 7.42fil
+............\hbox(0.0+0.0)x0.0
+............\TU/lmr/bx/n/5 10
+............\penalty 10000
+............\glue(\parfillskip) 0.0 plus 1.0fil
+............\glue(\rightskip) 0.0
+.........\kern -320.0
+.........\kern 0.0
+.........\vbox(16.79993+7.20007)x320.0, shifted 120.0
+..........\hbox(16.79993+7.20007)x320.0
+...........\hbox(0.0+0.0)x0.0
+...........\rule(16.79993+7.20007)x0.0
+...........\glue 0.0
+...........\rule(0.0+0.4)x320.0
+...........\penalty 10000
+...........\glue(\parfillskip) 0.0 plus 1.0fil
+...........\glue(\rightskip) 0.0
+........\kern -320.0
+........\kern 322.5
+........\vbox(3.305+0.0)x15.0, shifted 120.0
+.........\hbox(3.305+0.0)x15.0, glue set 7.42fil
+..........\hbox(0.0+0.0)x0.0
+..........\TU/lmr/bx/n/5 11
+..........\penalty 10000
+..........\glue(\parfillskip) 0.0 plus 1.0fil
+..........\glue(\rightskip) 0.0
+.......\kern -320.0
+.......\kern 0.0
+.......\vbox(16.79993+7.20007)x320.0, shifted 144.0
+........\hbox(16.79993+7.20007)x320.0
+.........\hbox(0.0+0.0)x0.0
+.........\rule(16.79993+7.20007)x0.0
+.........\glue 0.0
+.........\rule(0.0+0.4)x320.0
+.........\penalty 10000
+.........\glue(\parfillskip) 0.0 plus 1.0fil
+.........\glue(\rightskip) 0.0
+......\kern -320.0
+......\kern 322.5
+......\vbox(3.305+0.0)x15.0, shifted 144.0
+.......\hbox(3.305+0.0)x15.0, glue set 7.42fil
+........\hbox(0.0+0.0)x0.0
+........\TU/lmr/bx/n/5 12
+........\penalty 10000
+........\glue(\parfillskip) 0.0 plus 1.0fil
+........\glue(\rightskip) 0.0
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\special{color push gray 0}
+...\special{color pop}
+...\special{color pop}
+...\penalty -51
+...\glue 4.0 plus 2.0 minus 1.0
+...\glue(\parskip) 4.0 plus 2.0 minus 1.0
+...\glue(\parskip) 0.0
+...\glue(\lineskip) 0.0
+...\hbox(16.79993+7.20007)x320.0, glue set 208.94fill, shifted 25.0
+....\hbox(6.66+0.21999)x0.0
+.....\glue 0.0
+.....\glue -20.0
+.....\glue -5.0
+.....\hbox(6.66+0.21999)x20.0, glue set 20.0fil
+......\special{color push gray 0}
+......\glue 0.0 plus 1.0fil minus 1.0fil
+......\hbox(6.66+0.21999)x0.0, glue set - 7.78fil
+.......\glue 0.0 plus 1.0fil minus 1.0fil
+.......\TU/lmr/m/n/10 3.
+......\special{color pop}
+.....\glue 5.0
+....\penalty 0
+....\TU/lmr/m/n/10 Summarise
+....\glue 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 your
+....\glue 3.33 plus 1.665 minus 1.11
+....\TU/lmr/m/n/10 analysis.
+....\special{color push gray 0.5}
+....\leaders 0.0 plus 1.0fill
+.....\hbox(16.79993+7.20007)x3.30002
+......\rule(8.39996+3.60004)x0.0
+......\hbox(1.06+0.0)x3.30002, glue set 0.26001fil
+.......\glue 0.0 plus 1.0fil minus 1.0fil
+.......\TU/lmr/m/n/10 .
+.......\glue 0.0 plus 1.0fil minus 1.0fil
+......\kern 0.0
+....\kern 0.0
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\glue(\parskip) 4.0 plus 2.0 minus 1.0
+...\glue(\parskip) 0.0
+...\glue(\lineskip) 0.0
+...\hbox(144.0+0.0)x345.0
+....\hbox(0.0+0.0)x0.0
+....\hbox(144.0+0.0)x345.0
+.....\hbox(0.0+0.0)x0.0
+.....\kern 0.0
+.....\kern 25.0
+.....\hbox(16.79993+127.20007)x320.0, shifted -127.20007
+......\hbox(16.79993+127.20007)x320.0
+.......\hbox(16.79993+103.20007)x320.0
+........\hbox(16.79993+103.20007)x320.0
+.........\hbox(16.79993+79.20007)x320.0
+..........\hbox(16.79993+79.20007)x320.0
+...........\hbox(16.79993+55.20007)x320.0
+............\hbox(16.79993+55.20007)x320.0
+.............\hbox(16.79993+31.20007)x320.0
+..............\hbox(16.79993+31.20007)x320.0
+...............\hbox(16.79993+7.20007)x320.0
+................\vbox(16.79993+7.20007)x320.0
+.................\hbox(16.79993+7.20007)x320.0, glue set 320.0fill
+..................\hbox(0.0+0.0)x0.0
+..................\rule(16.79993+7.20007)x0.0
+..................\glue 0.0
+..................\leaders 0.0 plus 1.0fill
+...................\hbox(1.06+0.0)x3.30002, glue set 0.26001fil
+....................\glue 0.0 plus 1.0fil minus 1.0fil
+....................\TU/lmr/m/n/10 .
+....................\glue 0.0 plus 1.0fil minus 1.0fil
+..................\kern 0.0
+..................\penalty 10000
+..................\glue(\parfillskip) 0.0 plus 1.0fil
+..................\glue(\rightskip) 0.0
+................\kern -320.0
+................\kern 322.5
+................\vbox(6.77+0.0)x15.0
+.................\hbox(6.77+0.0)x15.0, glue set 5.0fil
+..................\hbox(0.0+0.0)x0.0
+..................\TU/lmr/m/n/10 14
+..................\penalty 10000
+..................\glue(\parfillskip) 0.0 plus 1.0fil
+..................\glue(\rightskip) 0.0
+...............\kern -320.0
+...............\kern 0.0
+...............\vbox(16.79993+7.20007)x320.0, shifted 24.0
+................\hbox(16.79993+7.20007)x320.0, glue set 320.0fill
+.................\hbox(0.0+0.0)x0.0
+.................\rule(16.79993+7.20007)x0.0
+.................\glue 0.0
+.................\leaders 0.0 plus 1.0fill
+..................\hbox(1.06+0.0)x3.30002, glue set 0.26001fil
+...................\glue 0.0 plus 1.0fil minus 1.0fil
+...................\TU/lmr/m/n/10 .
+...................\glue 0.0 plus 1.0fil minus 1.0fil
+.................\kern 0.0
+.................\penalty 10000
+.................\glue(\parfillskip) 0.0 plus 1.0fil
+.................\glue(\rightskip) 0.0
+..............\kern -320.0
+..............\kern 322.5
+..............\vbox(6.66+0.21999)x15.0, shifted 24.0
+...............\hbox(6.66+0.21999)x15.0, glue set 5.0fil
+................\hbox(0.0+0.0)x0.0
+................\TU/lmr/m/n/10 15
+................\penalty 10000
+................\glue(\parfillskip) 0.0 plus 1.0fil
+................\glue(\rightskip) 0.0
+.............\kern -320.0
+.............\kern 0.0
+.............\vbox(16.79993+7.20007)x320.0, shifted 48.0
+..............\hbox(16.79993+7.20007)x320.0, glue set 320.0fill
+...............\hbox(0.0+0.0)x0.0
+...............\rule(16.79993+7.20007)x0.0
+...............\glue 0.0
+...............\leaders 0.0 plus 1.0fill
+................\hbox(1.06+0.0)x3.30002, glue set 0.26001fil
+.................\glue 0.0 plus 1.0fil minus 1.0fil
+.................\TU/lmr/m/n/10 .
+.................\glue 0.0 plus 1.0fil minus 1.0fil
+...............\kern 0.0
+...............\penalty 10000
+...............\glue(\parfillskip) 0.0 plus 1.0fil
+...............\glue(\rightskip) 0.0
+............\kern -320.0
+............\kern 322.5
+............\vbox(6.66+0.21999)x15.0, shifted 48.0
+.............\hbox(6.66+0.21999)x15.0, glue set 5.0fil
+..............\hbox(0.0+0.0)x0.0
+..............\TU/lmr/m/n/10 16
+..............\penalty 10000
+..............\glue(\parfillskip) 0.0 plus 1.0fil
+..............\glue(\rightskip) 0.0
+...........\kern -320.0
+...........\kern 0.0
+...........\vbox(16.79993+7.20007)x320.0, shifted 72.0
+............\hbox(16.79993+7.20007)x320.0, glue set 320.0fill
+.............\hbox(0.0+0.0)x0.0
+.............\rule(16.79993+7.20007)x0.0
+.............\glue 0.0
+.............\leaders 0.0 plus 1.0fill
+..............\hbox(1.06+0.0)x3.30002, glue set 0.26001fil
+...............\glue 0.0 plus 1.0fil minus 1.0fil
+...............\TU/lmr/m/n/10 .
+...............\glue 0.0 plus 1.0fil minus 1.0fil
+.............\kern 0.0
+.............\penalty 10000
+.............\glue(\parfillskip) 0.0 plus 1.0fil
+.............\glue(\rightskip) 0.0
+..........\kern -320.0
+..........\kern 322.5
+..........\vbox(6.76+0.21999)x15.0, shifted 72.0
+...........\hbox(6.76+0.21999)x15.0, glue set 5.0fil
+............\hbox(0.0+0.0)x0.0
+............\TU/lmr/m/n/10 17
+............\penalty 10000
+............\glue(\parfillskip) 0.0 plus 1.0fil
+............\glue(\rightskip) 0.0
+.........\kern -320.0
+.........\kern 0.0
+.........\vbox(16.79993+7.20007)x320.0, shifted 96.0
+..........\hbox(16.79993+7.20007)x320.0, glue set 320.0fill
+...........\hbox(0.0+0.0)x0.0
+...........\rule(16.79993+7.20007)x0.0
+...........\glue 0.0
+...........\leaders 0.0 plus 1.0fill
+............\hbox(1.06+0.0)x3.30002, glue set 0.26001fil
+.............\glue 0.0 plus 1.0fil minus 1.0fil
+.............\TU/lmr/m/n/10 .
+.............\glue 0.0 plus 1.0fil minus 1.0fil
+...........\kern 0.0
+...........\penalty 10000
+...........\glue(\parfillskip) 0.0 plus 1.0fil
+...........\glue(\rightskip) 0.0
+........\kern -320.0
+........\kern 322.5
+........\vbox(6.66+0.21999)x15.0, shifted 96.0
+.........\hbox(6.66+0.21999)x15.0, glue set 5.0fil
+..........\hbox(0.0+0.0)x0.0
+..........\TU/lmr/m/n/10 18
+..........\penalty 10000
+..........\glue(\parfillskip) 0.0 plus 1.0fil
+..........\glue(\rightskip) 0.0
+.......\kern -320.0
+.......\kern 0.0
+.......\vbox(16.79993+7.20007)x320.0, shifted 120.0
+........\hbox(16.79993+7.20007)x320.0, glue set 320.0fill
+.........\hbox(0.0+0.0)x0.0
+.........\rule(16.79993+7.20007)x0.0
+.........\glue 0.0
+.........\leaders 0.0 plus 1.0fill
+..........\hbox(1.06+0.0)x3.30002, glue set 0.26001fil
+...........\glue 0.0 plus 1.0fil minus 1.0fil
+...........\TU/lmr/m/n/10 .
+...........\glue 0.0 plus 1.0fil minus 1.0fil
+.........\kern 0.0
+.........\penalty 10000
+.........\glue(\parfillskip) 0.0 plus 1.0fil
+.........\glue(\rightskip) 0.0
+......\kern -320.0
+......\kern 322.5
+......\vbox(6.66+0.21999)x15.0, shifted 120.0
+.......\hbox(6.66+0.21999)x15.0, glue set 5.0fil
+........\hbox(0.0+0.0)x0.0
+........\TU/lmr/m/n/10 19
+........\penalty 10000
+........\glue(\parfillskip) 0.0 plus 1.0fil
+........\glue(\rightskip) 0.0
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\special{color push gray 0}
+...\special{color pop}
+...\special{color pop}
+...\glue 0.0 plus 1.0fil
+...\glue 0.0
+...\glue 0.0 plus 0.0001fil
+..\glue(\baselineskip) 23.34
+..\hbox(6.66+0.21999)x345.0
+...\special{color push gray 0}
+...\hbox(6.66+0.21999)x345.0, glue set 170.0fil
+....\glue 0.0 plus 1.0fil
+....\TU/lmr/m/n/10 3
+....\glue 0.0 plus 1.0fil
+...\special{color pop}
+============================================================
