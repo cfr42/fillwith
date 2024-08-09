@@ -1,6 +1,6 @@
 # Manifest for fillwith
 
-Copyright (C) Fri Aug  9 03:18:24 2024 Clea F. Rees
+Copyright (C) Fri Aug  9 12:12:59 2024 Clea F. Rees
 
 This work may be distributed and/or modified under the conditions of the LaTeX
 Project Public License, either version 1.3c of this license or (at your option)

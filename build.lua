@@ -1,4 +1,4 @@
--- $Id: build.lua 10210 2024-08-09 02:10:38Z cfrees $
+-- $Id: build.lua 10216 2024-08-09 11:39:41Z cfrees $
 -- Build configuration for fillwith
 --------------------------------------------------------------------------------
 os.setenv ("PATH", "/usr/local/texlive/bin:/usr/bin:")
@@ -20,14 +20,14 @@ tdslocations = {
 typesetfiles = {"*.dtx","*.tex"}
 typesetdemofiles = {"fillwith-example.tex"}
 uploadconfig = {
-  ctanPath = "pkg/fillwith",
+  ctanPath = "/macros/latex/contrib/fillwith",
   pkg = "fillwith",
   version = "v0.3",
   author = "Clea F. Rees",
   uploader = "Clea F. Rees",
   license = "lppl1.3c",
   update = false,
-  summary = "LaTeX package for filling vertical space with something rather than nothing. Currently supported somethings are solid rules and dotted lines, with or without numbers.",
+  summary = "LaTeX package for filling vertical space with something (e.g. solid rules or dotted lines) rather than nothing.",
   description = "LaTeX package for filling vertical space with something rather than nothing. Currently supported somethings are solid rules and dotted lines, with or without numbers. The package uses a mixture of plain-ish macros, LaTeX 2e and expl3 methods, but a key-value approach to configuration should make the document-level interface relatively sane, even if nothing else is.",
 	bugtracker = {"https://codeberg.org/cfr/fillwith/issues"},
 	repository = {"https://codeberg.org/cfr/fillwith", "https://github.com/cfr42/fillwith"},
