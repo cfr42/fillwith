@@ -1,4 +1,4 @@
--- $Id: build.lua 10216 2024-08-09 11:39:41Z cfrees $
+-- $Id: build.lua 10220 2024-08-09 20:28:14Z cfrees $
 -- Build configuration for fillwith
 --------------------------------------------------------------------------------
 os.setenv ("PATH", "/usr/local/texlive/bin:/usr/bin:")
@@ -29,9 +29,11 @@ uploadconfig = {
   update = false,
   summary = "LaTeX package for filling vertical space with something (e.g. solid rules or dotted lines) rather than nothing.",
   description = "LaTeX package for filling vertical space with something rather than nothing. Currently supported somethings are solid rules and dotted lines, with or without numbers. The package uses a mixture of plain-ish macros, LaTeX 2e and expl3 methods, but a key-value approach to configuration should make the document-level interface relatively sane, even if nothing else is.",
-	bugtracker = {"https://codeberg.org/cfr/fillwith/issues"},
-	repository = {"https://codeberg.org/cfr/fillwith", "https://github.com/cfr42/fillwith"},
-  topic = {"exercise", "teaching", "leaders", "expl3"}, 
+	bugtracker = "https://codeberg.org/cfr/fillwith/issues",
+  -- repository is documented as accepting multiple values, but validation fails
+	-- repository = {"https://codeberg.org/cfr/fillwith", "https://github.com/cfr42/fillwith"},
+	repository = "https://codeberg.org/cfr/fillwith",
+  topic = {"exercise", "teaching", "leaders", "expl3"},
 }
 --------------------------------------------------------------------------------
 dofile(maindir .. "/manifest.lua")
