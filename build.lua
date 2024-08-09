@@ -1,4 +1,4 @@
--- $Id: build.lua 10208 2024-08-08 16:34:56Z cfrees $
+-- $Id: build.lua 10210 2024-08-09 02:10:38Z cfrees $
 -- Build configuration for fillwith
 --------------------------------------------------------------------------------
 os.setenv ("PATH", "/usr/local/texlive/bin:/usr/bin:")
@@ -12,7 +12,11 @@ dofile(maindir .. "/tag.lua")
 --------------------------------------------------------------------------------
 ctanpkg = "fillwith"
 module = "fillwith"
+installfiles = { "*.cls", "*.sty", "*.tex" }
 packtdszip = true
+tdslocations = {
+  "doc/latex/fillwith/fillwith-example.tex",
+}
 typesetfiles = {"*.dtx","*.tex"}
 typesetdemofiles = {"fillwith-example.tex"}
 uploadconfig = {
