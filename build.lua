@@ -1,4 +1,4 @@
--- $Id: build.lua 10220 2024-08-09 20:28:14Z cfrees $
+-- $Id: build.lua 10497 2024-10-12 05:57:08Z cfrees $
 -- Build configuration for fillwith
 --------------------------------------------------------------------------------
 os.setenv ("PATH", "/usr/local/texlive/bin:/usr/bin:")
@@ -8,7 +8,6 @@ os.setenv ("TEXMFARCH", ".")
 --------------------------------------------------------------------------------
 local maindir = maindir or "."
 --------------------------------------------------------------------------------
-dofile(maindir .. "/tag.lua")
 --------------------------------------------------------------------------------
 ctanpkg = "fillwith"
 module = "fillwith"
@@ -36,5 +35,9 @@ uploadconfig = {
   topic = {"exercise", "teaching", "leaders", "expl3"},
 }
 --------------------------------------------------------------------------------
-dofile(maindir .. "/manifest.lua")
+if direxists(sourcedir .. "/../adnoddau/l3build") then
+  dofile(sourcedir .. "/../adnoddau/l3build/manifest.lua")
+  dofile(sourcedir .. "/../adnoddau/l3build/tag.lua")
+end
+--------------------------------------------------------------------------------
 -- vim: ts=2:sw=2:
