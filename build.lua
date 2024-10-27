@@ -1,4 +1,4 @@
--- $Id: build.lua 10497 2024-10-12 05:57:08Z cfrees $
+-- $Id: build.lua 10537 2024-10-27 04:41:33Z cfrees $
 -- Build configuration for fillwith
 --------------------------------------------------------------------------------
 os.setenv ("PATH", "/usr/local/texlive/bin:/usr/bin:")
@@ -6,7 +6,8 @@ os.setenv ("TEXMFHOME", ".")
 os.setenv ("TEXMFLOCAL", ".")
 os.setenv ("TEXMFARCH", ".")
 --------------------------------------------------------------------------------
-local maindir = maindir or "."
+maindir = maindir or "."
+sourcedir = sourcedir or "."
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 ctanpkg = "fillwith"
