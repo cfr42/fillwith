@@ -193,12 +193,12 @@ cm-super
 # babel-welsh
 # hyphen-welsh
 
-# nfssext-cfr
-# cfr-lm
+nfssext-cfr
+cfr-lm
 
 # bookmark
-# parskip
+parskip
 # svn-multi
-# svn-prov
+svn-prov
 # xcolor
 # xurl
