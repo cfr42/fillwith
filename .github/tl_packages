@@ -190,18 +190,15 @@ cm-super
 
 # ychwanegol
 
-babel-welsh
-hyphen-welsh
+# babel-welsh
+# hyphen-welsh
 
-lmodern
-nfssext-cfr
-cfr-lm
+# nfssext-cfr
+# cfr-lm
 
-bookmark
-graphicx
-parskip
-svn-multi
-svn-prov
-verbatim
-xcolor
-xurl
+# bookmark
+# parskip
+# svn-multi
+# svn-prov
+# xcolor
+# xurl
