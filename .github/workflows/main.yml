@@ -36,5 +36,7 @@ jobs:
           # List the required TeX Live packages in a separate file to allow reuse in
           # different workflows.
           package_file: .github/tl_packages
+      - name: Remove environmental restrictions
+        run: sed -i '/^os\.setenv /d' build.lua
       - name: Run l3build
         run: l3build ctan
