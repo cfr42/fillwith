@@ -57,12 +57,12 @@ collection-basic
         acro
         adjustbox
         attachfile
-        # bearwear
-        # blindtext
+        bearwear
+        blindtext
         cleveref
         csquotes
         doclicense
-        # duckuments
+        duckuments
         embedfile
         enumitem
         etoc
@@ -73,33 +73,33 @@ collection-basic
         hvlogos
         hypdoc
         intopdf
-        # kantlipsum
+        kantlipsum
         lastpage
-        # latex-amsmath-dev
-        # latex-base-dev
-        # latex-bin-dev
+        latex-amsmath-dev
+        latex-base-dev
+        latex-bin-dev
         latex-context-ppchtex
-        # latex-firstaid-dev
-        # latex-graphics-dev
-        # latex-lab-dev
-        # latex-tools-dev
-        # lipsum
-        # listing
-        # listingsutf8
+        latex-firstaid-dev
+        latex-graphics-dev
+        latex-lab-dev
+        latex-tools-dev
+        lipsum
+        listing
+        listingsutf8
         lua-check-hyphen
         marginnote
         mleftright
         mlist
         mmap
-        # mwe
+        mwe
         pdfcolmk
-        # scrlayer-fancyhdr
-        # scrwfile
-        # tabularray
+        scrlayer-fancyhdr
+        scrwfile
+        tabularray
         transparent
         varwidth
         xpatch
-        # zref
+        zref
         
 # from collection-luatex
         ctablestack
@@ -116,19 +116,19 @@ collection-basic
 
 # from collection xetex
         realscripts
-        # xelatex-dev
+        xelatex-dev
         xetex
         xetexconfig
 
 # from collection-langgerman
-        # babel-german
-        # dehyph
-        # dehyph-exptl
-        # hyphen-german
+        babel-german
+        dehyph
+        dehyph-exptl
+        hyphen-german
  
 # from collection-latexrecommended
         attachfile2
-        # beamer
+        beamer
         booktabs
         caption
         etoolbox
@@ -137,13 +137,13 @@ collection-basic
         hologo
         index
         infwarerr
-        # koma-script
+        koma-script
         l3experimental
         latexbug
         lineno
-        # listings
+        listings
         mathtools
-        # memoir
+        memoir
         microtype
         parskip
         pdfcolfoot
@@ -160,29 +160,29 @@ collection-basic
         xkeyval
 
 # other
-# pgf 
+pgf 
 marginnote 
-# tikzducks 
-# tikzlings 
+tikzducks 
+tikzlings 
 catchfile
-# babel-latin
-# hyphen-latin
-# sourcesanspro
+babel-latin
+hyphen-latin
+sourcesanspro
 psnfss
-# tex-gyre
+tex-gyre
 hyperxmp
-# tugboat
-# babel-greek
-# babel-spanish
-# times
-# ntheorem
-# babel-dutch
-# hyphen-greek
-# greek-fontenc
-# greek-inputenc
-# hyphen-ancientgreek
-# cbfonts-fd
-# cbfonts
+tugboat
+babel-greek
+babel-spanish
+times
+ntheorem
+babel-dutch
+hyphen-greek
+greek-fontenc
+greek-inputenc
+hyphen-ancientgreek
+cbfonts-fd
+cbfonts
 
 # fonts
 amsfonts 
@@ -198,9 +198,7 @@ nfssext-cfr
 cfr-lm
 
 bookmark
-# cleveref
 graphicx
-# oberdiek
 parskip
 svn-multi
 svn-prov
