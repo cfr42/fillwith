@@ -47,7 +47,7 @@ collection-basic
         refcount
         rerunfilecheck
         stringenc
-        # tagpdf
+        tagpdf
         tools
         uniquecounter
         url
@@ -56,17 +56,17 @@ collection-basic
         accsupp
         acro
         adjustbox
-        # attachfile
+        attachfile
         # bearwear
         # blindtext
         cleveref
         csquotes
-        # doclicense
+        doclicense
         # duckuments
-        # embedfile
+        embedfile
         enumitem
-        # etoc
-        # filecontents
+        etoc
+        filecontents
         fonttable
         getfiledate
         hobsub
@@ -74,7 +74,7 @@ collection-basic
         hypdoc
         intopdf
         # kantlipsum
-        # lastpage
+        lastpage
         # latex-amsmath-dev
         # latex-base-dev
         # latex-bin-dev
@@ -96,8 +96,8 @@ collection-basic
         # scrlayer-fancyhdr
         # scrwfile
         # tabularray
-        # transparent
-        # varwidth
+        transparent
+        varwidth
         xpatch
         # zref
         
@@ -127,19 +127,19 @@ collection-basic
         # hyphen-german
  
 # from collection-latexrecommended
-        # attachfile2
+        attachfile2
         # beamer
         booktabs
         caption
         etoolbox
         float
-        # fontspec
+        fontspec
         hologo
         index
         infwarerr
         # koma-script
-        # l3experimental
-        # latexbug
+        l3experimental
+        latexbug
         lineno
         # listings
         mathtools
@@ -147,24 +147,24 @@ collection-basic
         microtype
         parskip
         pdfcolfoot
-        # pdflscape
-        # pdfmanagement-testphase
-        # pdfpages
+        pdflscape
+        pdfmanagement-testphase
+        pdfpages
         pdftexcmds
         ragged2e
         setspace
         textcase
         translator
-        # unicode-math
+        unicode-math
         xcolor
         xkeyval
 
 # other
 # pgf 
-# marginnote 
+marginnote 
 # tikzducks 
 # tikzlings 
-# catchfile
+catchfile
 # babel-latin
 # hyphen-latin
 # sourcesanspro
