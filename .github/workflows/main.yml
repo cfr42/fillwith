@@ -1,14 +1,16 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Automatic Checks
 
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "devel", "main" ]
+    branches: 
+      - "*"
   pull_request:
-    branches: [ "devel", "main" ]
+    branches: 
+      - "*"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -16,7 +18,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "l3build"
-  l3build:
+  l3build-ctan:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -34,11 +36,5 @@ jobs:
           # List the required TeX Live packages in a separate file to allow reuse in
           # different workflows.
           package_file: .github/tl_packages
-
-      - name: Build docs
-        run: |
-          l3build doc
-          l3build check
-
-#      - name: Run l3build
-#        run: l3build ctan -q -H
+      - name: Run l3build
+        run: l3build ctan
