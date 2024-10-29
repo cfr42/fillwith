@@ -1,4 +1,6 @@
-$Id: README.md 10215 2024-08-09 11:12:21Z cfrees $
+$Id: README.md 10542 2024-10-29 06:20:16Z cfrees $
+
+[![CI](https://github.com/cfr42/fillwith/actions/workflows/profi.yml/badge.svg)](https://github.com/cfr42/fillwith/actions/workflows/profi.yml)
 
 # fillwith
 
