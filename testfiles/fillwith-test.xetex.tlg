@@ -15,7 +15,7 @@ Completed box being shipped out [1]
 ....\special{color pop}
 ..\glue 25.0
 ..\glue(\lineskip) 0.0
-..\vbox(550.0+0.0)x345.0, glue set 157.81665fill
+..\vbox(550.0+0.0)x345.0, glue set 157.13332fill
 ...\write-{}
 ...\special{color push gray 0}
 ...\glue(\topskip) 0.0
@@ -160,7 +160,6 @@ Completed box being shipped out [1]
 ...\special{color push gray 0}
 ...\special{color pop}
 ...\special{color pop}
-...\glue -2.04999
 ...\glue 0.0 plus 1.0fil
 ...\glue 0.0
 ...\glue 0.0 plus 0.0001fil
@@ -188,7 +187,7 @@ Completed box being shipped out [2]
 ....\special{color pop}
 ..\glue 25.0
 ..\glue(\lineskip) 0.0
-..\vbox(550.0+0.0)x345.0, glue set 158.49998fill
+..\vbox(550.0+0.0)x345.0, glue set 156.83331fill
 ...\write-{}
 ...\glue(\topskip) 0.0
 ...\hbox(16.79993+7.20007)x320.0, glue set 184.28fil, shifted 25.0
@@ -344,7 +343,6 @@ Completed box being shipped out [2]
 ...\special{color push gray 0}
 ...\special{color pop}
 ...\special{color pop}
-...\glue -5.0
 ...\glue 0.0 plus 1.0fil
 ...\glue 0.0
 ...\glue 0.0 plus 0.0001fil

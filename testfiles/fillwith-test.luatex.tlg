@@ -22,7 +22,7 @@ Completed box being shipped out [1]
 ....\pdfcolorstack 0 pop
 ..\glue 25.0
 ..\glue(\lineskip) 0.0
-..\vbox(550.0+0.0)x345.0, glue set 157.81665fill, direction TLT
+..\vbox(550.0+0.0)x345.0, glue set 157.13332fill, direction TLT
 ...\write-{}
 ...\pdfcolorstack 0 push {0 g 0 G}
 ...\glue(\topskip) 0.0
@@ -278,7 +278,6 @@ Completed box being shipped out [1]
 ...\pdfcolorstack 0 push {0 g 0 G}
 ...\pdfcolorstack 0 pop
 ...\pdfcolorstack 0 pop
-...\glue -2.05
 ...\glue 0.0 plus 1.0fil
 ...\glue 0.0
 ...\glue 0.0 plus 0.0001fil
@@ -314,7 +313,7 @@ Completed box being shipped out [2]
 ....\pdfcolorstack 0 pop
 ..\glue 25.0
 ..\glue(\lineskip) 0.0
-..\vbox(550.0+0.0)x345.0, glue set 158.49998fill, direction TLT
+..\vbox(550.0+0.0)x345.0, glue set 156.83331fill, direction TLT
 ...\write-{}
 ...\glue(\topskip) 0.0
 ...\hbox(16.79993+7.20007)x320.0, glue set 184.28fil, shifted 25.0, direction TLT
@@ -598,7 +597,6 @@ Completed box being shipped out [2]
 ...\pdfcolorstack 0 push {0 g 0 G}
 ...\pdfcolorstack 0 pop
 ...\pdfcolorstack 0 pop
-...\glue -5.0
 ...\glue 0.0 plus 1.0fil
 ...\glue 0.0
 ...\glue 0.0 plus 0.0001fil
