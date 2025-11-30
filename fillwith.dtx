@@ -1,7 +1,7 @@
 % \iffalse meta-comment
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % fillwith.dtx
-% Additions and changes Copyright (C) 2024 Clea F. Rees.
+% Additions and changes Copyright (C) 2024-2025 Clea F. Rees.
 % Code from skeleton.dtx Copyright (C) 2015-2024 Scott Pakin (see below).
 %
 % This work may be distributed and/or modified under the
@@ -29,12 +29,14 @@
 % \iffalse
 %<*driver>
 \RequirePackage{svn-prov}
-\ProvidesFileSVN{$Id: fillwith.dtx 11245 2025-10-01 23:28:53Z cfrees $}[v0.3 \revinfo][\filename: \filebase]
+\ProvidesFileSVN{$Id: fillwith.dtx 11374 2025-11-30 06:32:40Z cfrees $}[v0.3 \revinfo][\filename: \filebase]
 \DefineFileInfoSVN[fillwith]
 \GetFileInfoSVN*
 % ref. ateb Max Chernoff: https://tex.stackexchange.com/a/723294/ 
 \def\MakePrivateLetters{\makeatletter\ExplSyntaxOn\endlinechar13}
 \documentclass[british,a4paper]{ltxdoc}
+% ltnews42 / ateb David Carlisle: https://tex.stackexchange.com/a/754799/ (sylwad Ulrike Fischer rhywle ond alla i ddim canfod o hyd iddo fe)
+\partokencontext=0
 \usepackage{babel}
 \usepackage[tt={monowidth,lining,tabular},sf={lining,proportional},rm={lining,proportional}]{cfr-lm}
 \usepackage{fillwith}
@@ -286,7 +288,7 @@
 %    \begin{macrocode}
 \NeedsTeXFormat{LaTeX2e}[2021-11-15]
 \RequirePackage{svn-prov}
-\ProvidesPackageSVN[\filebase.sty]{$Id: fillwith.dtx 11245 2025-10-01 23:28:53Z cfrees $}[v0.0 \revinfo][\filebase: fill vertically with non-space]
+\ProvidesPackageSVN[\filebase.sty]{$Id: fillwith.dtx 11374 2025-11-30 06:32:40Z cfrees $}[v0.0 \revinfo][\filebase: fill vertically with non-space]
 % this is needed only because l3doc overwrites \fileversion and \filedate
 % neither ltxdoc nor doc does this
 \DefineFileInfoSVN
